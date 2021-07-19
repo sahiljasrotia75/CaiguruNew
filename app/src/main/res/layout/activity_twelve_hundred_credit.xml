@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".seller.sellerSetting.sellerCreditEarned.CreditEarnedByShoppingListActivity">
+
+
+        <ImageView
+                android:id="@+id/creditimg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_credit_earned"
+                tools:ignore="UnknownIdInLayout" />
+
+        <TextView
+                android:id="@+id/totalcredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/creditimg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="1200 cr"
+                android:textColor="@color/purple"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/textCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalcredit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/purple"
+                android:text="@string/congratulation"
+                android:textSize="24sp" />
+
+
+
+        <TextView
+                android:id="@+id/twelvehundredtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCredit"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/hard_grey"
+                android:text="@string/youearntwelvehundredcredit"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btnLetsdoit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Letsdoit"
+                android:textAllCaps="false"
+
+                android:layout_above="@+id/txtNoThanks"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text" />
+
+        <TextView
+                android:id="@+id/txtNoThanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/txtnothanks"
+                android:textAlignment="center"
+                android:textColor="@color/purple"
+                android:textSize="16sp" />
+
+
+<!--        <LinearLayout-->
+<!--                android:id="@+id/tabs"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/textCredit"-->
+<!--                android:layout_marginStart="14dp"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                    android:id="@+id/btnEarnedByShoppinList"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="46dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/curve_rectangle_credit_purple"-->
+<!--                    android:fontFamily="@font/montserrat_regular"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="14dp"-->
+<!--                    android:paddingBottom="14dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/Earned_Via_Shopping_List"-->
+<!--                    android:textColor="@color/purple"-->
+<!--                    android:textSize="12dp" />-->
+
+<!--            <TextView-->
+<!--                    android:id="@+id/btnEarnedByReferalCode"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="46dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/curve_rectangle_referral_credit_purple"-->
+<!--                    android:fontFamily="@font/montserrat_regular"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="14dp"-->
+<!--                    android:paddingBottom="14dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/Earned_Via_Referred_Friends"-->
+<!--                    android:textColor="@color/purple"-->
+<!--                    android:textSize="12dp" />-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_below="@+id/tabs">-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/recyclerEarnedShoppinList"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tabs"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:visibility="visible" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/recyclerEarnedByReferalCode"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tabs"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:visibility="gone" />-->
+
+<!--            <ProgressBar-->
+<!--                    android:id="@+id/progress"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:visibility="gone" />-->
+
+<!--            <include-->
+<!--                    layout="@layout/nodata"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_below="@+id/tabs"-->
+<!--                    android:visibility="gone" />-->
+<!--        </RelativeLayout>-->
+
+
+    </RelativeLayout>
+</layout>

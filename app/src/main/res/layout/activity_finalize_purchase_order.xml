@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical"
+            tools:context="com.example.caiguru.buyer.chooseSellers.chooseSellerCreditsPayForSingleList.PayCreditsSingleListActivity">
+
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnLayout"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/toolbar"
+                android:fillViewport="true">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear"
+                    android:orientation="vertical">
+                <TextView
+                        android:id="@+id/sellerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="listname"
+                        android:textColor="@color/purple"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="12dp">
+
+
+                    <TextView
+                            android:id="@+id/headdeliveytime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recycler1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/Delivery_Type"
+                            android:textColor="@color/purple"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:id="@+id/txtdeliverytype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end|center"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="end"
+                            android:hint="Home Delivery"
+                            android:textColor="@color/hard_grey"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/headdeliveyDays"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".8"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/Pickup_days"
+                                android:textColor="@color/purple"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycleerTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/headdeliveyDays"
+                                app:layout_constraintTop_toBottomOf="@+id/headdeliveyDays" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/headdeliveyAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="18dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/Pickup_Address"
+                                android:textColor="@color/purple"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:id="@+id/txtdeliveryAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="18dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:hint="Delivery Address"
+                                android:textColor="@color/hard_grey"
+                                android:textSize="14sp"
+                                tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/txtHeadferPayment"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="18dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/payment_method_finalize"
+                                android:textColor="@color/purple"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:id="@+id/txtPaymentMethod"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="18dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="end"
+                                android:hint="credit, debit"
+                                android:textColor="@color/hard_grey"
+                                android:textSize="14sp"
+                                tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="18dp">
+
+                    <TextView
+                            android:id="@+id/txtCashOnDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recycler1"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/Cash_on_Delivery"
+                            android:textColor="@color/hard_grey"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:id="@+id/txtPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recycler1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end|center"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="$256"
+                            android:textColor="@color/hard_grey"
+                            android:textSize="14dp"
+                            tools:ignore="HardcodedText,SpUsage,UnknownIdInLayout" />
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/light_grey" />
+
+
+                <TextView
+                        android:id="@+id/belowHeadingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/montserrat_regularitalic"
+                        android:gravity="center"
+                        android:text="*You need to pay 164 credits to finish this order."
+                        android:textColor="@color/hard_grey"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/btnLayout"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="80dp">
+
+            <Button
+                    android:id="@+id/btnPayCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="Pay 164 credits"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text"
+                    tools:ignore="HardcodedText" />
+
+            <Button
+                    android:id="@+id/btnWait"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginEnd="34dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/pleasewait"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text"
+                    android:visibility="invisible" />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>

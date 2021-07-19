@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:context=".buyer.chooseSellers.chooseSellerShoppingList.ChooseSellerShoppingListActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerList"
+                android:layout_above="@+id/PurchaseAll"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="14dp" />
+
+        <Button
+                android:id="@+id/PurchaseAll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:visibility="invisible"
+                android:layout_below="@id/addlayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Purchase_all"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text" />
+
+        <Button
+                android:id="@+id/btnWait"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/addlayout"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/pleasewait"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+                android:id="@+id/txtNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/No_Data_Reload"
+                android:textColor="@color/hard_grey"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+        <ProgressBar
+                android:id="@+id/progressPagination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+    </RelativeLayout>
+</layout>

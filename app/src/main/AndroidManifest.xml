@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.example.caiguru">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+            tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+<!--    <uses-feature android:name="android.hardware.location.gps"/>-->
+    <application
+            android:allowBackup="false"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/app_logo"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/app_logo"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            android:windowSoftInputMode="adjustResize"
+            android:debuggable="true"
+            tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode,UnusedAttribute"
+            tools:replace="android:allowBackup">
+        <activity
+                android:name=".commonScreens.otherProfiles.sellerStoreProfile.orderPlacedSucessfully.StoreOrderPlacedActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.otherProfiles.sellerStoreProfile.finalizePurchaseOrder.FinalizePurchaseOrderActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.otherProfiles.sellerStoreProfile.viewStoreProductFullScren.ViewStoreFullScreenActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.otherProfiles.sellerStoreProfile.SellerStoreActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerOrderDetails.FinalizeOrderDetailsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerPendingApproval.BuyerPendingApprovalActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerCancelledOrder.BuyerCancelledActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerOrderComplete.BuyerOrderCompleteActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerToBeDelivered.BuyerToBeDeliveredActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.finalizeOrder.FinalizeOrderActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.sellerPostShoppingList.dragDropProduct.DragDropProductActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.sellerPostShoppingList.savedProductSeller.SearchSavedProduct.SearchSavedProductActivity"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.sellerPostShoppingList.savedProductSeller.SavedProductActivity"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.dashBoardParentActivity.searchProductOrSeller.SearchSellerProuctsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.sellerPostShoppingList.ShoppingListPart1Activity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.blockedUser.BlockedUserActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.help.HelpActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.termsConditionPrivacyPolicy.TermsAndCondtionActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.deliveryZoneSeller.deliveryZoneMaBox.DeliveryZoneMapBoxActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.homeBuyers.homeBuyer.viewTagMoreUser.HomeBuyerViewMorePeopleActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.imageFullScreenDisplay.zoomImageView.FullScreenImageWithZoomActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerAddAddress.BuyerAddressMapBoxActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.updatedAddress.UpdatedAddressMapBoxActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.earnCreditsConvert.CreditConvertActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.sellerOrder.sellerCancelledOrderList.SellerCancelledOrderListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.homeBuyers.buyerHomeView.buyerViewDetails.BuyerDeliveryDetailsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.homeBuyers.buyerHomeView.buyerHomeViews.BuyerHomeViewActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.homeBuyers.tagUser.TagBuyerHomeActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.homeBuyers.commentBuyers.CommentBuyerHomeActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".commonScreens.commonNotifications.rateBuyer.RateBuyerActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerOrderDetalis.underReviewOrderDetails.UnderReviewOrderDetailsActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.networkError.NetworkErrorActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.commonNotifications.disputeAndResolution.refuteSellerSideNotification.ResolutionActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.shoppingListSellers.openListt.sellerOpenlistDetails.SellerOpenListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerCreditEarned.BuyerCreditEarnedActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.commonNotifications.disputeAndResolution.raiseADsiputeBuyerSideNotification.RaiseADisputesActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.otherProfiles.viewAllReviewslist.OtherProfileReviewsAllActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.commonNotifications.rateSeller.RateSellerActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.commonNotifications.commonNotificationConfirmation.CommonNotificationConfirmationActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.commonNotifications.commonNotification.CommonNotificationActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.otherProfiles.viewAllShoppingList.ViewAllShoppingActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerLoadMore.ChooseSellerLoadMoreActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerOrderDetalis.BuyerOrderDetailsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerMyOrder.BuyerMyOrderActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.otherProfiles.otherProfile.OtherProfileViewActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.buyerLists.buyerDeliveryDetail.BuyerDeliveryDetailActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.orderRejected.OrderRejectedActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.closeList.closelistDetails.CloseListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.buyerProfile.followings.FollowingBuyerActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.buyerProfile.follower.FollowerBuyerActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.chat.chatMessage.ChatMessagesActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.chat.ChatActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.chat.archiveChat.ArchiveChatActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.shoppingListSellers.loadmorecloseList.LoadMoreCloseListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.orderCompleted.OrderCompletedActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerLists.buyerQuotedShoppingList.BuyeropenShoppingListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.buyerLists.buyerShopApproveReject.BuyerShopListApproveRejectActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerOrderCompleted.SellerOrderCompletedActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerOrderCanelled.SellerOrderCancelledActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerToBeDeliveredOrderList.ToBeDeliveredOrderListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerApprovalOrderList.SellerApprovalOrderListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerToBeDelivered.SellerToBeDeliveredActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerOrder.sellerPendingApprovals.SellerPendingApprovalsActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.referralCode.ReferralCodeActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerSetting.sellerBuyCredits.SellerBuyCreditsActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerSetting.sellerCreditEarned.CreditEarnedByShoppingListActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".commonScreens.imageFullScreenDisplay.ImageFullScreenActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerSuggestProduct.ChooseSellerSuggestProductActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerPlaceOrder.ChooseSellerPlaceOrderActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerCreditsPayForAllList.PayCreditsMultipleListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerLists.buyerShopListModify.BuyerShopListModifyActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerDeliveryDetails.ChooseSellerDeliveryDetailsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.postList.buyerPostScreenPrefilled.BuyerPostShopPreFillActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerCreditsPayForSingleList.PayCreditsSingleListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.chooseSellers.chooseSellerShoppingList.ChooseSellerShoppingListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.sellerSetting.sellerProfile.sellerMyprofile.MyProfileActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerSetting.sellerProfile.sellerEditProfile.SellerEditProfile"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.chooseSellers.loadmore.LoadMoreActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.sellerChangePassword.ChangePasswordActivity"
+                android:configChanges="orientation|screenSize" />
+        <activity
+                android:name=".seller.shoppingListSellers.listUploadedByCustomer.customerUploadedDeliveryDetails.CustomerListDeliveryDetailActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.listUploadedByCustomer.customerUploadedRequestedList.CustomerRequestListActivity"
+                android:configChanges="orientation|screenSize"
+                android:label=""
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.updatedAddress.UpdatedAddressActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.closeList.sellerClosedList.SellerClosedListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.shoppingListPosted.ShoppingListPostedActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.sellerSelectedDaysAndTime.SellerSelectDaysAndTimeActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.sellerPostShoppingList.SellerPostShoppingListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.listUploadedByCustomer.listUploadedByCustomers.SellerCustomerListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.sellerChooseCategory.SellerChooseCategoryActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.postList.shoppingListPosted.BuyerShoppingListPostedActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.dashBoardParentActivity.DashBoardBuyerActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.forgotPassword.ForgotPasswordActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerEditProfile.BuyerEditProfileActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerProfile.buyerMyProfile.BuyerMyProfileActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.registerCategory.RegisterCategoryActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.registerActivity.RegisterActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".seller.shoppingListSellers.deliveryZoneSeller.DeliveryZoneActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".seller.shoppingListSellers.openListt.openList.OpenListActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".commonScreens.selectCities.SelectCitiesActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerAddAddress.BuyerAddAddressActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".buyer.buyerOrder.buyerOrderDetails.FinalizeApproveRejectDetailsActivity"
+                android:configChanges="orientation|screenSize"
+                android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".commonScreens.loginScreen.LoginActivity" />
+        <activity
+                android:name=".commonScreens.splashScreen.SplashScreenActivity"
+                android:configChanges="orientation|screenSize"
+                android:theme="@style/AppTheme1"
+                android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name="com.facebook.FacebookActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
+        <!-- android:label="@string/app_name" /> -->
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id" />
+
+        <activity
+                android:name="com.facebook.FacebookActivity"
+                android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name" />
+        <activity
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="@string/fb_login_protocol_scheme"
+                        tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".commonScreens.chat.archiveChat.archiveChatMessage.ArchiveChatMessagesActivity"
+                android:configChanges="orientation|screenSize" /> <!-- <meta-data -->
+        <!-- android:name="com.facebook.sdk.ApplicationId" -->
+        <!-- android:value="@string/facebook_app_id" /> -->
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCA14lCUfT4tb2gD7gUQ7NKeu9usiErZrM" />
+
+        <service
+                android:name=".commonScreens.notificationHelper.MyFirebaseMessagingService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+                android:name=".commonScreens.dashBoardParentActivity.MyBackgroundServices"
+                android:enabled="true"
+                android:exported="true" />
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

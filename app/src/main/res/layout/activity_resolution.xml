@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".commonScreens.commonNotifications.disputeAndResolution.raiseADsiputeBuyerSideNotification.RaiseADisputesActivity">
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:id="@+id/parentLayout"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:id="@+id/shoppingListLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/curve_rectangle_fill_purple"
+                    tools:ignore="UnknownIdInLayout">
+
+                <TextView
+                        android:id="@+id/txtListName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ResolutionRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtListName" />
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/ResolutionRecycler"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/light_grey" />
+
+                <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/Total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/txttotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shoppingListLayout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/Buyer_details"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+
+            <RelativeLayout
+                    android:id="@+id/relativeImaged"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_below="@+id/txtHeading"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userPic"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/circle_background_full_yellow"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_profile" />
+
+                <ImageView
+                        android:id="@+id/imgBatchs"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_profile" />
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/textBuyerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtHeading"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@+id/relativeImaged"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:text="test"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+            <TextView
+                    android:id="@+id/txtNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textBuyerName"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@+id/relativeImaged"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:text="9805531298"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+            <TextView
+                    android:id="@+id/reasonHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeImaged"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/Reason_for_dispute"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/txtReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reasonHeading"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Reason_for_dispute"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="14sp" />
+
+            <Button
+                    android:id="@+id/btnConfirmCompletions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_below="@+id/txtReason"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Accept_Dispute"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+            <Button
+                    android:id="@+id/btnWaitCompletions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_below="@+id/txtReason"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="invisible"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Please_wait"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+
+            <TextView
+                    android:id="@+id/txtRefute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnConfirmCompletions"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="14dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Refute"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+<!--    <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/txtNoData"-->
+<!--            android:textSize="24dp"-->
+<!--            android:visibility="invisible"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="@string/No_Data_Reload"-->
+<!--            android:layout_height="wrap_content"/>-->
+<include layout="@layout/nodata"
+        android:visibility="gone"
+        android:id="@+id/NoDataResolution"/>
+    <ProgressBar
+            android:id="@+id/progressPagination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+</RelativeLayout>

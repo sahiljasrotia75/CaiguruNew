@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:background="@color/background"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp">
+
+
+        <include
+                android:id="@+id/commontoolbar"
+                layout="@layout/toolbar" />
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                    android:id="@+id/cardView"-->
+        <!--                    android:layout_marginTop="14dp"-->
+        <!--                    android:layout_marginLeft="12dp"-->
+        <!--                    android:layout_marginRight="12dp"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="56dp"-->
+        <!--                    app:cardCornerRadius="8dp">-->
+
+        <!--                <TextView-->
+        <!--                        android:id="@+id/txtList"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:layout_marginStart="12dp"-->
+        <!--                        android:fontFamily="@font/montserrat_bold"-->
+        <!--                        android:gravity="center_vertical"-->
+        <!--                        android:textSize="13dp" />-->
+
+        <!--                <ImageView-->
+        <!--                        android:id="@+id/updown"-->
+        <!--                        android:layout_width="16dp"-->
+        <!--                        android:layout_height="16dp"-->
+        <!--                        android:layout_gravity="end|center"-->
+        <!--                        android:layout_marginEnd="12dp"-->
+        <!--                        android:src="@drawable/ic_up_arrow" />-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChilds"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/commontoolbar"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white"                    android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+        <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        <ProgressBar
+                android:id="@+id/progressBarPagination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true" />
+
+<!--        <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:id="@+id/txtNoData"-->
+<!--                android:textSize="24dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:fontFamily="@font/montserrat_medium"-->
+<!--                android:textColor="@color/hard_grey"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:text="@string/No_Data_Reload"-->
+<!--                android:layout_height="wrap_content"/>-->
+        <include
+                android:id="@+id/noDatabuyerList"
+                layout="@layout/nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/commontoolbar"
+                android:visibility="gone" />
+    </RelativeLayout>
+</layout>

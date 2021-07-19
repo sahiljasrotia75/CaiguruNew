@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:id="@+id/allLayout"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/parentlayout"
+            android:orientation="horizontal">
+        <TextView
+                android:id="@+id/productName"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Tomato(KG)"
+                android:textColor="@color/hard_grey"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+<!--    <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/innerLayout"-->
+<!--            android:orientation="horizontal">-->
+<!--        <TextView-->
+<!--                android:id="@+id/productName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/montserrat_regular"-->
+<!--                android:text="Tomato(KG)"-->
+<!--                android:maxLines="3"-->
+<!--                android:textColor="@color/hard_grey"-->
+<!--                android:textSize="14dp" />-->
+
+<!--        <TextView-->
+<!--                android:id="@+id/unit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/montserrat_regular"-->
+<!--                android:text="(KG)"-->
+<!--                android:textColor="@color/hard_grey"-->
+<!--                android:textSize="14dp" />-->
+<!--    </LinearLayout>-->
+        <TextView
+                android:id="@+id/prices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+
+            <ImageView
+                    android:id="@+id/subtractbtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="6dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_subtract" />
+
+            <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+
+            <ImageView
+                    android:id="@+id/addBtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="6dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_add02" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curve_rectangle_category_grey"
+                    android:scaleType="centerCrop"
+                    app:riv_border_color="#bbbbbb"
+                    app:riv_border_width="1dip"
+                    app:riv_corner_radius="6dp"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="repeat"
+                    tools:ignore="InefficientWeight">
+
+            </com.makeramen.roundedimageview.RoundedImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/parentlayout"
+            android:layout_marginTop="14dp"
+            android:background="@color/light_grey" />
+
+
+
+</RelativeLayout>
+
+
+
+
+

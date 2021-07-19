@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/heading"
+        app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_purple"
+            android:orientation="horizontal">
+
+
+        <TextView
+                android:id="@+id/listnames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Shopping_list_name"
+                android:textAllCaps="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/purple"
+                android:textSize="16sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerChild"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listnames" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layoutt"
+                android:layout_below="@+id/recyclerChild"
+                android:orientation="horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/txtTotals"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Total"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+
+            <TextView
+                    android:id="@+id/txtPrices"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="end|right"
+                    android:text="286"
+
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

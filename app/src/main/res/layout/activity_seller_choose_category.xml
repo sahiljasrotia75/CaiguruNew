@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/background"
+            android:layout_height="match_parent"
+            tools:context=".seller.sellerChooseCategory.BuyerChooseCategoryActivity">
+
+        <include layout="@layout/toolbar" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnfinish"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+                android:id="@+id/btnfinish"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/recycler"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Done"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+                android:id="@+id/btnwait"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/recycler"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Please_wait"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="34dp"
+                android:fontFamily="@font/montserrat_regularitalic"
+                android:text="@string/Seller_category_heading"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/seller_heading_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

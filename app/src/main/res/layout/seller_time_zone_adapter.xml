@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="8dp">
+
+<LinearLayout
+        android:id="@+id/LayoutGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+        <TextView
+                android:id="@+id/txtweekszone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:textSize="14dp" />
+
+        <ImageView
+                android:id="@+id/updown"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_up_arrow" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+
+            android:id="@+id/relativechild"
+            android:visibility="visible"
+            android:background="@drawable/bg_white">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+              />
+
+    </RelativeLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

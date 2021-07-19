@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+            android:id="@+id/refferal"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_rewards_home"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/toolbartittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white" />
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/toolbarAdressHome"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:autoSizeTextType="uniform"-->
+    <!--            android:fontFamily="@font/montserrat_bold"-->
+    <!--            android:gravity="center|bottom"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:text="ajjfhadgfh"-->
+    <!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+    <!--            android:textColor="@color/white" />-->
+    <!--    <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:id="@+id/toolbartittle"-->
+    <!--            android:visibility="visible"-->
+    <!--            android:gravity="center|center_horizontal"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--        <TextView-->
+    <!--                android:id="@+id/toolbartittles"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:autoSizeTextType="uniform"-->
+    <!--                android:fontFamily="@font/montserrat_bold"-->
+    <!--                android:gravity="center"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:text="hdajfhasd"-->
+    <!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+    <!--                android:textColor="@color/white" />-->
+
+    <!--        <TextView-->
+    <!--                android:id="@+id/toolbarAdressHome"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:autoSizeTextType="uniform"-->
+    <!--                android:fontFamily="@font/montserrat_bold"-->
+    <!--                android:gravity="center_horizontal"-->
+    <!--                android:maxLines="1"-->
+    <!--                -->
+    <!--                android:textAlignment="center"-->
+    <!--                android:layout_marginTop="4dp"-->
+    <!--                android:textSize="10dp"-->
+    <!--                -->
+    <!--                android:layout_below="@+id/toolbartittles"-->
+    <!--                android:text="ajjfhadgfhasdasdasdasdasdasdasdasdassadd"-->
+    <!--                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+    <!--                android:textColor="@color/white" />-->
+    <!--    </RelativeLayout>-->
+    <TextView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@string/done"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/PleasWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@string/Please_wait"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <ImageView
+            android:id="@+id/checkTotalCredits"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_dollar_home"
+            android:visibility="gone" />
+
+    <ImageView
+            android:id="@+id/setSearch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_search_product_home"
+            android:visibility="gone" />
+
+
+    <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@string/Skip"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/inCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@string/incash"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/editToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@string/edit"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/Clear"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <ImageView
+            android:id="@+id/whatsAppTextICons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_whatsapp"
+            android:paddingBottom="6dp"
+            android:text="@string/contact"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/whatsAppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/contact"
+            android:textColor="@color/yellow"
+            android:visibility="gone" />
+
+
+    <RelativeLayout
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/chatIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_chat_home"
+                android:visibility="visible" />
+
+        <Button
+                android:id="@+id/toolbarMesageButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/circle_background_red"
+                android:gravity="center"
+                android:text="2000"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/chatOrderDetail"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/chatIcon2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_chat_home"
+                android:visibility="visible" />
+
+        <Button
+                android:id="@+id/toolbarMesageButton2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background_red"
+                android:gravity="center"
+                android:text="2000"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

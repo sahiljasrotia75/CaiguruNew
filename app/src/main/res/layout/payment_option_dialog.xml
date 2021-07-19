@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_dialog"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/payment_method"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="18dp" />
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeader"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="14dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/you_can_choose_more_than_one_payment_method"
+            android:textAlignment="textStart"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp" />
+
+<!--    <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/imageCash"-->
+<!--            android:layout_below="@+id/title"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:src="@drawable/radiobutton_self_pickup_selector"-->
+<!--            android:layout_marginTop="10dp"/>-->
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_below="@+id/title"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:text="@string/cash"-->
+<!--            android:id="@+id/titleCash"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:textAlignment="viewStart"-->
+<!--            android:layout_toRightOf="@id/imageCash"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/imageCredit"-->
+<!--            android:layout_below="@+id/imageCash"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:src="@drawable/radiobutton_self_pickup_selector"-->
+<!--            android:layout_marginTop="10dp"/>-->
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_below="@+id/titleCash"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:text="@string/Credit"-->
+<!--            android:id="@+id/titleCredit"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:textAlignment="viewStart"-->
+<!--            android:layout_toRightOf="@id/imageCash"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--    <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/imageDebit"-->
+<!--            android:layout_below="@+id/imageCredit"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:src="@drawable/radiobutton_self_pickup_selector"-->
+<!--            android:layout_marginTop="10dp"/>-->
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_below="@+id/titleCredit"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:text="@string/debit"-->
+<!--            android:id="@+id/titleDebit"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:textAlignment="viewStart"-->
+<!--            android:layout_toRightOf="@id/imageDebit"-->
+<!--            android:layout_height="wrap_content"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/title"
+            android:id="@+id/paymentMethodRecycler"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_curve_loginbutton"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:layout_below="@+id/paymentMethodRecycler"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/btnOk"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/purple"
+            android:layout_marginBottom="22dp"
+            android:textSize="14dp" />
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <include
+                android:id="@+id/commontoolbar"
+                layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/commontoolbar"
+                android:fillViewport="true">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="48dp"
+                        app:srcCompat="@mipmap/referral" />
+
+                <TextView
+                        android:id="@+id/txtcaigurupurchase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="@string/txtcaiguruPlatform"
+                        android:textSize="@dimen/all_title_text" />
+
+                <TextView
+                        android:id="@+id/txtrefferalcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtcaigurupurchase"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="@string/referralcode"
+                        android:textSize="@dimen/all_title_text" />
+
+                <TextView
+                        android:id="@+id/refferalcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtrefferalcode"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/dotted"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="@string/referralcode"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/refferal_text" />
+
+
+                <Button
+                        android:id="@+id/btnShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_below="@+id/refferalcode"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/share"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/button_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                        android:id="@+id/txtHowItWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:padding="10dp"
+                        android:layout_below="@+id/btnShare"
+                        android:text="@string/how_it_works_and_how_to_get_paid"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple"
+                        android:textSize="12sp" />
+
+                <TextView
+                        android:id="@+id/txtToolToEranMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:padding="10dp"
+                        android:layout_below="@+id/txtHowItWork"
+                        android:text="@string/tools_to_earn_more_money"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple"
+                        android:textSize="12sp" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

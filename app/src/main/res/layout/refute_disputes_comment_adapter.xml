@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ReasonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OrderCompleted"
+        android:visibility="visible">
+
+    <TextView
+            android:id="@+id/txtDisputeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/dispute_reason"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp"
+            android:visibility="visible" />
+
+    <TextView
+            android:id="@+id/CommentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toRightOf="@+id/textDispute"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="end"
+            android:text="date"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp" />
+
+    <TextView
+            android:id="@+id/txtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDisputeTitle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="cjdgchsdfghd"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp" />
+
+    <View
+            android:id="@+id/view55"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/txtComment"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/light_grey" />
+
+
+</RelativeLayout>
+

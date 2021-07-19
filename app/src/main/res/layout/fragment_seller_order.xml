@@ -1,0 +1,38 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".seller.sellerOrder.sellerOrdersFragment.SellerOrderFragment">
+
+        <TextView
+                android:id="@+id/activeShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/No_Data_Reload"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/activeShop"
+                android:layout_marginTop="12dp" />
+
+    </RelativeLayout>
+</layout>

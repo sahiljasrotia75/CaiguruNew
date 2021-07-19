@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    <LinearLayout
+            android:id="@+id/parentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:context=".seller.shoppingListSellers.sellerPostShoppingList.SellerPostShoppingListActivity">
+
+                <TextView
+                        android:id="@+id/activeHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:fontFamily="@font/montserrat_light"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:padding="4dp"
+                        android:text="@string/active"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/switchView"
+                        app:layout_constraintTop_toBottomOf="@+id/switchView"
+                        tools:ignore="UnknownIdInLayout" />
+
+                <TextView
+                        android:id="@+id/shoppingProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activeHome"
+                        android:background="@mipmap/eighty_percent_progressbar"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="@string/completed_screen_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/shoppingProgress"
+        android:id="@+id/layoutPart1"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/texthead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/Name_of_The_list"
+            android:textColor="@color/purple"
+            android:textSize="16sp">
+
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/texthead"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="12dp">
+
+        <EditText
+
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/Name"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textSize="13sp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+            android:id="@+id/textcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/Category"
+            android:textColor="@color/purple"
+            android:textSize="16sp" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/textcategory"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="12dp">
+
+        <TextView
+                android:id="@+id/txtcategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:drawableEnd="@drawable/ic_home_arrow"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/choose_category"
+                android:textSize="13sp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+                <!--divide the layout-->
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/layoutPart1"
+                        android:id="@+id/layoutPart2"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                            android:id="@+id/relativedelivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="16dp">
+
+                        <TextView
+                                android:id="@+id/textdeliver"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/Delivery_Zone"
+                                android:textColor="@color/purple"
+                                android:textSize="16sp" />
+
+                        <ImageView
+                                android:id="@+id/addLocation"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_add02"
+                                android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler1"
+                            android:layout_below="@+id/relativedelivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    <TextView
+                            android:id="@+id/headdeliveytime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recycler1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/Delivery_Time"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/headdeliveytime"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:cardCornerRadius="12dp">
+
+                        <TextView
+                                android:id="@+id/txtdeliverytime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:drawableEnd="@drawable/ic_home_arrow"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/Delivery_Time"
+                                android:paddingTop="18dp"
+                                android:paddingBottom="18dp"
+                                android:textSize="13sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                            android:id="@+id/headpickupinformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/card4"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/pickup_information"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp" />
+
+                    <TextView
+                            android:id="@+id/pickuptext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/headpickupinformation"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="22dp"
+                            android:fontFamily="@font/montserrat_regularitalic"
+                            android:text="@string/pickup_information_heading"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="12sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pickuptext"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:cardCornerRadius="12dp">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp">
+
+                            <TextView
+                                    android:id="@+id/chooseDeliveryZone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:drawableEnd="@drawable/ic_home_arrow"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/choose_Delivery_zone_seller_list"
+                                    android:textSize="13sp" />
+
+                            <View
+                                    android:id="@+id/view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:layout_below="@+id/chooseDeliveryZone"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:background="@color/light_grey" />
+
+
+                            <TextView
+                                    android:id="@+id/txtdayAndTimePickOptional"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/view"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:drawableEnd="@drawable/ic_home_arrow"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/Days_And_Time_Pick"
+                                    android:paddingTop="18dp"
+                                    android:paddingBottom="18dp"
+                                    android:text=""
+                                    android:textSize="13sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                            android:id="@+id/textminimumpurchse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/card5"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/Minimun_purchase_amount"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card6"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_below="@+id/textminimumpurchse"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:cardCornerRadius="12dp">
+
+                        <EditText
+                                android:id="@+id/edtPurchase"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/Write_a_minimun_purchase_amount"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="13sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                            android:id="@+id/txtPaymentMethod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/card6"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/payment_method"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card7"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_below="@+id/txtPaymentMethod"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:cardCornerRadius="12dp">
+
+                        <TextView
+                                android:id="@+id/edtSelectPaymentMethod"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@android:color/transparent"
+                                android:drawableEnd="@drawable/ic_home_arrow"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/choose_payment_method"
+                                android:singleLine="true"
+                                android:textSize="13sp" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <!--end of the layout-->
+                <TextView
+                        android:id="@+id/txtcomission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutPart2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                <SeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtcomission"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:progressTint="@color/yellow"
+                        android:thumbTint="@color/yellow"
+                        android:visibility="gone"/>
+
+                <TextView
+                        android:id="@+id/txtproductOfYourShopping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekbar"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/Product_of_your_shopping_list"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclers"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:focusableInTouchMode="true"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtproductOfYourShopping" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/addlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recyclers"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="26dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+<!--                    <ImageView-->
+<!--                            android:id="@+id/imgadd"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="30dp"-->
+<!--                            android:focusableInTouchMode="true"-->
+<!--                            android:src="@drawable/ic_add_shopping_list" />-->
+
+<!--                    <TextView-->
+<!--                            android:id="@+id/txtaddmore"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:layout_marginTop="12dp"-->
+<!--                            android:layout_marginEnd="10dp"-->
+<!--                            android:fontFamily="@font/montserrat_regular"-->
+<!--                            android:text="@string/Add_product"-->
+<!--                            android:textColor="@color/purple"-->
+<!--                            android:textSize="12sp" />-->
+                    <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.09"
+                            app:layout_constraintStart_toStartOf="@+id/txtAddProdctHeader"
+                            app:layout_constraintTop_toBottomOf="@+id/txtAddProdctHeader"
+                            app:srcCompat="@drawable/ic_editlist" />
+
+                    <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/new_products"
+                            android:textColor="@color/purple"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView7"
+                            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+
+                    <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageView7"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/ic_copylist" />
+
+                    <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/saved_products"
+                            android:textColor="@color/purple"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView8"
+                            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                    <TextView
+                            android:id="@+id/txtAddProdctHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/add_products"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                            android:id="@+id/txtNewProducts"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageView7"
+                            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+                    <View
+                            android:id="@+id/txtSavedProducts"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageView8"
+                            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <RelativeLayout
+                        android:id="@+id/buttonlayout"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="34dp"
+                        android:padding="10dp"
+                        android:elevation="12dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/addlayout">
+
+                    <TextView
+                            android:id="@+id/btnfinish"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_size"
+                            android:background="@drawable/rectangle_curve_loginbutton"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/finish"
+                            android:textAlignment="center"
+                            android:elevation="120dp"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/button_text"
+                            android:padding="4dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                            android:id="@+id/btnWait"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_size"
+                            android:background="@drawable/rectangle_curve_loginbutton"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/pleasewait"
+                            android:textAllCaps="false"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/button_text"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:elevation="120dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                        android:id="@+id/textMoreProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buttonlayout"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginEnd="34dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/montserrat_light"
+                        android:gravity="center"
+                        android:textColor="@color/textGrey"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

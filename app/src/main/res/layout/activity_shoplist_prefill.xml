@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <include
+                        android:id="@+id/homeToolbar"
+                        layout="@layout/toolbar">
+                </include>
+
+
+                <TextView
+                        android:id="@+id/textProductLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_below="@+id/homeToolbar"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/buyerposttext"
+                        android:textSize="@dimen/seller_heading_text_size" />
+
+
+                <TextView
+                        android:id="@+id/etxtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textProductLine"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/Name_of_The_list"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp">
+
+                </TextView>
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/etxtname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <EditText
+                            android:id="@+id/txtname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@null"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/Name"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                        android:id="@+id/texthead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/category"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp">
+
+                </TextView>
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/texthead"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <TextView
+                            android:id="@+id/txtcategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:drawableEnd="@drawable/ic_home_arrow"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center_vertical"
+                            android:hint="@string/choose_category"
+                            android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                        android:id="@+id/textdelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/delivery"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp">
+
+                </TextView>
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textdelivery"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="12dp">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
+
+                        <TextView
+                                android:id="@+id/chooseDeliveryZone"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:drawableEnd="@drawable/ic_home_arrow"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/address_text"
+                                android:textSize="13sp" />
+
+                        <View
+                                android:id="@+id/view"
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_below="@+id/chooseDeliveryZone"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@color/light_grey" />
+
+
+                        <TextView
+                                android:id="@+id/txtdayAndTimePickOptional"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/view"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:drawableEnd="@drawable/ic_home_arrow"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center_vertical"
+                                android:hint="@string/receive_order"
+                                android:textSize="13sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                        android:id="@+id/txtproductOfYourShopping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/product_shop_text"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtproductOfYourShopping" />
+
+                <Button
+                        android:id="@+id/btnAddproduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_marginStart="34dp"
+                        android:layout_below="@+id/recycler"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="34dp"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/addProduct"
+                        android:layout_marginBottom="16dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/button_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                        android:id="@+id/btnWait"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_marginBottom="16dp"
+                        android:layout_below="@+id/recycler"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/pleasewait"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/button_text"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                        android:id="@+id/textaddFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btnAddproduct"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="34dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/montserrat_regularitalic"
+                        android:gravity="center"
+                        android:text="@string/add_five_product"
+                        android:textSize="@dimen/seller_heading_text_size"
+                        android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

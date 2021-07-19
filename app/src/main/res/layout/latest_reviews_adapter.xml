@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/backColorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/rectangle_white_all_corners"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_background_full_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+                android:id="@+id/imgBatchs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/textnames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imoji"
+            android:textSize="14dp"
+            android:text="dahgsfvgsdvfsdhfvsdbfvsdbfvsdbffhjdfhjsdfhsdfjhsdfgsdhfsdgfhsgdhfgsdfhsdgfhsdfghsdfgshdffhsdfghfgfhghfdhfgdsdfhsdfgsdhfdhsdgfhsfhsfg"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/medium_grey"
+            />
+<!--    <TextView-->
+<!--            android:id="@+id/txtReadMore"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/textnames"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:padding="2dp"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:maxLines="2"-->
+<!--            android:text="@string/Read_more"-->
+<!--            android:textColor="@color/purple"-->
+<!--            android:textSize="14dp" />-->
+
+
+    <TextView
+            android:id="@+id/timeAgos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textnames"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/relativeImage"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="20 minute ago"
+            android:textColor="@color/hard_grey"
+            android:textSize="12dp" />
+
+    <ImageView
+            android:id="@+id/imoji"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/ic_good" />
+</RelativeLayout>

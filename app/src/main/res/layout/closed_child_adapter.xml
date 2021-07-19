@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_purple"
+        android:orientation="vertical">
+
+    <!--    <RelativeLayout-->
+    <!--            android:id="@+id/relativeImage"-->
+    <!--            android:layout_width="76dp"-->
+    <!--            android:layout_height="76dp"-->
+    <!--            android:layout_marginLeft="16dp"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            android:layout_marginRight="16dp">-->
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                android:id="@+id/userPic"-->
+    <!--                android:layout_width="70dp"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:background="@drawable/circle_background_yellow"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:src="@drawable/ic_profile" />-->
+
+    <!--        <ImageView-->
+    <!--                android:layout_width="40dp"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:id="@+id/imgBatchs"-->
+    <!--                android:layout_alignParentEnd="true"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:scaleType="fitXY"-->
+    <!--                android:src="@drawable/ic_profile" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+    <TextView
+            android:id="@+id/textlistname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:singleLine="true"
+            android:layout_toStartOf="@+id/viewDetail"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/purple"
+            android:textSize="14sp" />
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/reputation"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/textname"-->
+    <!--            android:layout_marginTop="6dp"-->
+    <!--            android:textSize="14dp"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:textColor="@color/medium_grey"-->
+    <!--            android:layout_toRightOf="@+id/relativeImage"-->
+    <!--            android:fontFamily="@font/montserrat_medium"-->
+    <!--            android:text="Reputation:" />-->
+    <!--    <TextView-->
+    <!--            android:id="@+id/distance"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/reputation"-->
+    <!--            android:layout_marginTop="6dp"-->
+    <!--            android:textSize="14dp"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:visibility="invisible"-->
+    <!--            android:textColor="@color/medium_grey"-->
+    <!--            android:layout_toRightOf="@+id/relativeImage"-->
+    <!--            android:fontFamily="@font/montserrat_medium"-->
+    <!--            android:text="Reputation:" />-->
+
+        <TextView
+                android:id="@+id/viewDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/view_detail"
+                android:layout_centerInParent="true"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+    <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/viewDetail"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/light_grey" />
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/texttimeInterval1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/Timeinterval"
+                android:textColor="@color/purple"
+                android:textSize="13dp" />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:id="@+id/btnReplicate"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/replicate"
+                android:textAlignment="center"
+                android:textColor="@color/purple"
+                android:textSize="12dp" />
+
+        <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnReplicate"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+
+            <TextView
+                    android:id="@+id/TxtFrom1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_expand"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/From"
+                    android:textColor="@color/hard_grey" />
+
+            <TextView
+                    android:id="@+id/textTo1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_expand"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/To"
+                    android:textColor="@color/hard_grey" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/Viewlinearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayout"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height=".5dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height=".5dp"
+                    android:layout_weight="0.1" />
+
+
+            <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height=".5dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

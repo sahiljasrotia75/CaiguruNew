@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/innerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/relativeImage"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userPic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/circle_background_full_yellow"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_profile" />
+
+            <ImageView
+                    android:id="@+id/imgBatchs"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_profile" />
+
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/textname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="24dp"
+                android:layout_toLeftOf="@+id/TagButton"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@+id/relativeImage"
+                android:fontFamily="@font/montserrat_bold"
+                android:singleLine="true"
+                android:text="test"
+                android:textAllCaps="true"
+                android:textColor="@color/purple"
+                android:textSize="16dp" />
+
+        <ImageView
+                android:id="@+id/TagButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reputation"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_tag_text_button"
+                android:visibility="visible" />
+
+
+        <ImageView
+                android:id="@+id/unTagButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reputation"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_tagged"
+                android:visibility="invisible" />
+
+
+
+        <ImageView
+                android:id="@+id/TagUnTagProgressBar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reputation"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_please_wait"
+                android:visibility="invisible" />
+
+    </RelativeLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/innerLayout"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/light_grey" />
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context="com.example.caiguru.buyer.buyerProfile.followings.FollowingBuyerActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:id="@+id/parentLayoutes"
+            android:layout_below="@+id/toolbar"
+            android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/blockeduser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/blocked_users"
+                android:visibility="invisible"
+                android:textColor="@color/medium_grey"
+                android:textSize="14sp" />
+
+        <TextView
+                android:id="@+id/totalBlockedUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_toEndOf="@id/blockeduser"
+                android:textAlignment="viewEnd"
+                android:layout_marginEnd="26dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="89"
+                android:visibility="invisible"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,UnknownIdInLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/blockedRecycler"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/blockeduser" />
+    </RelativeLayout>
+    <ProgressBar
+            android:id="@+id/progressPaginations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+    <ProgressBar
+            android:id="@+id/progressPaginationBlocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible" />
+    <include layout="@layout/nodata"
+            android:visibility="invisible"
+            android:id="@+id/NoDataFollower"/>
+</RelativeLayout>

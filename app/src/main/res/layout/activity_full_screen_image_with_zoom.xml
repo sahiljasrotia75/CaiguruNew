@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent"
+        tools:context="com.example.caiguru.commonScreens.imageFullScreenDisplay.zoomImageView.FullScreenImageWithZoomActivity">
+
+
+
+    <ImageView
+            android:id="@+id/cross"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_cross_icon" />
+<!--    <com.example.caiguru.commonScreens.imageFullScreenDisplay.zoomImageView.TouchImageView-->
+<!--            android:id="@+id/fullScreenImges"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--    <it.sephiroth.android.library.imagezoom.ImageViewTouch-->
+<!--            android:id="@+id/fullScreenImges"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@+id/cross"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:padding="8dp"-->
+<!--            android:scaleType="centerInside" />-->
+
+    <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_below="@+id/cross"
+            android:id="@+id/fullScreenImges"
+            android:layout_height="match_parent"/>
+
+
+
+
+</RelativeLayout>

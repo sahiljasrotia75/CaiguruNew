@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey"
+            tools:context=".setting_screen.Setting_Fragment">
+
+        <include
+                android:id="@+id/include2"
+                layout="@layout/toolbar"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="-14dp" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include2">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/Thank_you_for_your_order"
+                        android:textAlignment="center"
+                        android:textColor="@color/hard_grey"
+                        android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclershopping"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/btnsuggest"
+                        android:layout_below="@+id/heading"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="10dp" />
+
+
+                <Button
+                        android:id="@+id/btnsuggest"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Suggest_product_for_next_time"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/button_text"
+                        app:layout_constraintBottom_toTopOf="@+id/textView12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="SpUsage,UnknownIdInLayout" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="24dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

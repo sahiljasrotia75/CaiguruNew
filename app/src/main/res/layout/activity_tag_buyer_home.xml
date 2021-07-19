@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.caiguru.buyer.homeBuyers.tagUser.TagBuyerHomeActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+                android:id="@+id/AllLayoutParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+            <RelativeLayout
+                    android:id="@+id/CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/curve_rectangle_fill_purple">
+
+                <TextView
+                        android:id="@+id/shopListNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:maxLines="3"
+                        android:text="Shopping List Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvShoppingList"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shopListNames"
+                        android:layout_marginTop="12dp" />
+
+                <TextView
+                        android:id="@+id/viewMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvShoppingList"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/view_more"
+                        android:textColor="@color/purple"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/searchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CardView"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                <EditText
+                        android:id="@+id/searchFollow"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/curve_rectangle_full_grey"
+                        android:drawableStart="@drawable/ic_search_icon"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/Search_Users"
+                        android:imeOptions="actionDone"
+                        android:paddingStart="12dp"
+                        android:singleLine="true"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                <TextView
+                        android:id="@+id/txtcancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Cancle"
+                        android:textAlignment="center"
+                        android:textColor="@color/hard_grey" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tagRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/searchLayout"
+                    android:layout_marginTop="12dp" />
+
+            <ProgressBar
+                    android:id="@+id/progressTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchLayout"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible" />
+
+            <include
+                    android:id="@+id/NoDataTag"
+                    layout="@layout/nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/searchLayout"
+                    android:visibility="invisible" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

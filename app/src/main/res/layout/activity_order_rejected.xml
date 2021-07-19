@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <TextView
+                android:id="@+id/activeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        <TextView
+                android:id="@+id/rejectedtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activeOrder"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/rejected_text"
+                android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvrejectOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rejectedtext"
+                android:layout_marginTop="16dp" />
+
+
+        <RelativeLayout
+                android:id="@+id/rvRejected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvrejectOrder"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/curve_address">
+
+            <EditText
+                    android:id="@+id/edtRejected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/enter_reason"
+                    android:padding="16dp"
+                    android:maxLength="100"
+                    android:paddingStart="4dp"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/digitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvRejected"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="0/100"
+                android:textColor="@color/medium_grey"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+
+        <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/relative"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+                android:id="@+id/btnPleaseWait"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/relative"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/pleasewait"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
+</layout>

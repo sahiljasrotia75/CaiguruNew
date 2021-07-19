@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="click"
+                  type="com.example.caiguru.commonScreens.forgotPassword.ForgetClick"/>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:background="@color/purple"
+            android:src="@mipmap/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/background"
+                android:layout_height="match_parent"/>
+
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/login"
+                android:id="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.100000024"/>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:id="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.32">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/forgotPaswordText"
+                    android:text="@string/resetPassword"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/please"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/please_enter"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/forgotPaswordText"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"/>
+
+
+            <TextView
+                    android:text="@string/email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:drawablePadding="8dp"
+                    android:layout_below="@+id/please"
+                    android:layout_marginTop="64dp"
+                    android:drawableStart="@drawable/ic_log_email"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/log_email"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:layout_below="@id/textView"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textColorHint="@color/hard_grey"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/montserrat_light"
+                    android:hint="@string/email_hint"
+                    android:id="@+id/editemail"
+                    tools:ignore="TextFields" />
+
+            <TextView
+                    android:text="@string/sumbit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:textAllCaps="false"
+                    android:id="@+id/sumbit"
+                    android:layout_below="@+id/editemail"
+                    android:gravity="center"
+                    android:onClick="@{()->click.setclick(editemail.getText().toString())}"
+                    android:layout_marginTop="64dp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/log_button_text"/>
+
+            <TextView
+                    android:text="@string/pleasewait"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:textAllCaps="false"
+                    android:id="@+id/pleaseWait"
+                    android:layout_below="@+id/editemail"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="64dp"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/log_button_text"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

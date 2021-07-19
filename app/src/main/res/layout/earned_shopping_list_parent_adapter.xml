@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="8dp">
+
+    <LinearLayout
+            android:id="@+id/LayoutGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardViews"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:cardCornerRadius="8dp">
+
+            <TextView
+                    android:id="@+id/txtListName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center_vertical"
+                    android:textSize="13dp" />
+
+            <ImageView
+                    android:id="@+id/updown"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_up_arrow" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChildEarnedShoppingList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shoppingList"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

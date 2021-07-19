@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="@color/background"
+            android:layout_height="match_parent"
+            tools:context=".seller.sellerOrder.sellerPendingApprovals.SellerPendingApprovalsActivity">
+
+        <include layout="@layout/toolbar"/>
+
+        <TextView
+                android:id="@+id/activeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:layout_below="@+id/toolbar"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        <LinearLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activeOrder"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/btnPendingByer"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:background="@drawable/curve_rectangle_credit_purple"
+                    android:gravity="center"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:text="@string/Pending_by_Buyer"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/btnPendingSeller"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curve_rectangle_referral_credit_purple"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:text="@string/Pending_by_Seller"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+        </LinearLayout>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/pendingBybuyerRecycler"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/tabs"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                android:layout_marginBottom="8dp" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pendingBySellerRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabs"
+                android:layout_marginTop="14dp"
+                android:visibility="invisible"
+                android:layout_marginBottom="8dp" />
+
+        <ProgressBar
+                android:id="@+id/progressedBars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+        <include layout="@layout/nodata"
+                android:layout_below="@+id/tabs"
+                android:visibility="gone"
+                android:id="@+id/NoDataSellerPending"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+    </RelativeLayout>
+</layout>

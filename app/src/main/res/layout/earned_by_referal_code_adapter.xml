@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="8dp">
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="vertical">
+
+
+
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_background_full_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+
+                android:id="@+id/imgBatchs1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile" />
+    </RelativeLayout>
+
+
+    <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:singleLine="true"
+            android:text="test"
+            android:textColor="@color/purple"
+            android:textSize="14sp" />
+
+    <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtUserName"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/medium_grey"
+            android:textSize="14dp" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layout1"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeImage"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/txtcreditts"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="@string/Total_Order"
+                android:textAlignment="viewStart"
+                android:textColor="@color/medium_grey"
+                android:textSize="14dp"/>
+        <TextView
+                android:id="@+id/txtFullTotal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:singleLine="true"
+                android:layout_toRightOf="@+id/date"
+                android:text="320"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/hard_grey"
+                android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/layout1"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/textComission"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="@string/Comission_referred"
+                android:textAlignment="viewStart"
+                android:textColor="@color/medium_grey"
+                android:textSize="14dp"/>
+        <TextView
+                android:id="@+id/txtCredit"
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:singleLine="true"
+                android:layout_toRightOf="@+id/date"
+                android:text="10cr"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/hard_grey"
+                android:textSize="14dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

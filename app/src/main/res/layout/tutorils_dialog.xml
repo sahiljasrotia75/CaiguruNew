@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/txtTutorilsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="STEP 1"
+                android:textAlignment="center"
+                android:textColor="@color/purple"
+                android:textSize="22sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/txtStepsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="We want to include a tutorial in the Rewards screen. Please, let me know the price to do all this screens."
+                android:textAlignment="center"
+                android:textColor="@color/hard_grey"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        <ImageView
+                android:id="@+id/imageTutorils"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/tutorils_img"
+                android:scaleType="centerInside"
+                android:visibility="gone"/>
+
+        <RelativeLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp">
+
+            <TextView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="16sp"
+                    android:text="@string/back"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="16sp"
+                    android:text="@string/next_button"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

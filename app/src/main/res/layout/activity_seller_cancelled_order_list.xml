@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context="com.example.caiguru.seller.sellerOrder.sellerApprovalOrderList.SellerApprovalOrderListActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <TextView
+                android:id="@+id/activeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:id="@+id/nestedScrollLayout"
+                android:layout_below="@+id/activeOrder"
+                android:layout_marginTop="14dp"
+                android:fillViewport="true">
+
+
+            <RelativeLayout
+                    android:id="@+id/childlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerOrderList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                        android:id="@+id/addresslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recyclerOrderList"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp">
+
+                    <TextView
+                            android:id="@+id/headingAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/Delivery_Address"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:id="@+id/txtAddressbuyer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="adress"
+                            android:textAlignment="viewEnd"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/addresslayout"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@color/light_grey" />
+
+                <LinearLayout
+                        android:id="@+id/addresslayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp">
+
+                    <TextView
+                            android:id="@+id/comissionHeading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/partial_payment_made"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:id="@+id/txtComissions"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="comission"
+                            android:textAlignment="viewEnd"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/addresslayout1"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:visibility="visible"
+                        android:layout_marginEnd="14dp"
+                        android:background="@color/light_grey" />
+                <TextView
+                        android:id="@+id/titleCashOnDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:visibility="visible"
+                        android:layout_marginEnd="14dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/Cash_on_Deliverys" />
+                <TextView
+                        android:id="@+id/txtCashOnDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="visible"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Cash_on_Delivery" />
+                <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/txtCashOnDelivery"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@color/light_grey" />
+
+
+                <TextView
+                        android:id="@+id/txtCancelOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:fontFamily="@font/montserrat_regularitalic"
+                        android:text="@string/buyer_rejected"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+                android:id="@+id/progressedBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/noData"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/No_Data_Reload"
+                android:textColor="@color/hard_grey"
+                android:textSize="20sp" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/shoppingListSeller"
+            android:icon="@drawable/ic_shoppinglist_inactive_seller"
+            android:title="@string/Done">
+
+    </item>
+</menu>

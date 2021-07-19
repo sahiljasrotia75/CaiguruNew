@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/Product"
+            android:id="@+id/productname"
+            android:textColor="@color/purple"
+            android:textSize="14dp" />
+
+    <ImageView
+            android:id="@+id/imgdeleteData"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_deleteee"/>
+
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtaddProduct"
+            android:background="@null"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:hint="@string/Write_your_Product"
+            android:layout_below="@+id/productname"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/edtaddProduct"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@color/light_grey" />
+
+</RelativeLayout>

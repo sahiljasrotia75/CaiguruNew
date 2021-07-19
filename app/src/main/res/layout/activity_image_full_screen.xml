@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            tools:context=".commonScreens.imageFullScreenDisplay.ImageFullScreenActivity">
+
+        <!--        <com.example.caiguru.commonScreens.imageFullScreenDisplay.zoomImageView.TouchImageView-->
+        <!--                android:id="@+id/fullScreenImg"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent" />-->
+
+        <com.example.caiguru.commonScreens.imageFullScreenDisplay.zoomImageView.HackyViewPager
+                android:id="@+id/viewPagerFullScreenView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cross"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible" />
+
+        <ImageView
+                android:id="@+id/cross"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_cross_icon" />
+    </RelativeLayout>
+</layout>

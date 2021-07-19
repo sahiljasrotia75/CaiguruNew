@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".SellerSelectDaysAndTime">
+
+
+        <include layout="@layout/toolbar" />
+
+
+        <TextView
+                android:id="@+id/txtheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/sellertimezonetext" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerr"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btnfinish"
+                android:layout_below="@+id/txtheading" />
+
+
+        <Button
+                android:id="@+id/btnfinish"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_below="@id/addlayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/Done"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+</layout>

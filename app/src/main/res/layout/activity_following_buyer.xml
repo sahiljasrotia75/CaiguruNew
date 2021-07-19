@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context="com.example.caiguru.buyer.buyerProfile.followings.FollowingBuyerActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+            android:id="@+id/parentLayouts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:visibility="invisible">
+
+
+        <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/User_Following"
+                android:textColor="@color/medium_grey"
+                android:textSize="14sp" />
+
+        <TextView
+                android:id="@+id/txtFollowings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="26dp"
+                android:layout_toEndOf="@id/followers"
+                android:fontFamily="@font/montserrat_bold"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                tools:ignore="UnknownIdInLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/followingRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/followers"
+                android:layout_marginTop="12dp" />
+    </RelativeLayout>
+
+    <ProgressBar
+            android:id="@+id/progressPagination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    <ProgressBar
+            android:id="@+id/progressPagination22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/txtNoData"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:fontFamily="@font/montserrat_medium"-->
+    <!--            android:text="@string/No_Data_Reload"-->
+    <!--            android:textColor="@color/hard_grey"-->
+    <!--            android:textSize="24dp"-->
+    <!--            android:visibility="gone" />-->
+    <include
+            android:id="@+id/NODataFollower"
+            android:visibility="gone"
+            layout="@layout/nodata" />
+</RelativeLayout>

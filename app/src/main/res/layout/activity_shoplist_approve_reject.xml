@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <include
+                android:id="@+id/commontoolbar"
+                layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/parentLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnLayout"
+                android:layout_below="@+id/commontoolbar"
+                android:visibility="invisible">
+
+
+            <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <TextView
+                        android:id="@+id/txtHeaderCogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:layout_below="@+id/mpdifyQuoteText"
+                        android:text="@string/icongratulations"
+                        android:textColor="@color/purple"
+                        android:textSize="24sp" />
+                <TextView
+                        android:id="@+id/txtHeader2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/hard_grey"
+                        android:textSize="14sp"
+                        android:layout_toStartOf="@+id/imageView10"
+                        android:layout_below="@+id/txtHeaderCogo"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="You have an order"
+                        tools:ignore="HardcodedText" />
+                <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/congo"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/txtHeaderCogo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtHeaderCogo" />
+
+
+                <TextView
+                        android:id="@+id/mpdifyQuoteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/modify_shop_list_text"
+                        android:visibility="gone" />
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView10"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                            android:id="@+id/LayoutGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/cardVieW"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                app:cardCornerRadius="8dp">
+
+                            <TextView
+                                    android:id="@+id/txtListname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="12dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:gravity="center_vertical"
+                                    android:textSize="13sp" />
+
+                            <ImageView
+                                    android:id="@+id/updown"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="end|center"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/ic_up_arrow" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <RelativeLayout
+                                android:id="@+id/relative"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_white"
+                                android:elevation="0dp"
+                                android:visibility="visible">
+
+                            <TextView
+                                    android:id="@+id/listName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/shopping_list"
+                                    android:textColor="@color/purple"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvAppRejShopList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/listName"
+                                    android:nestedScrollingEnabled="false" />
+
+
+                            <RelativeLayout
+                                    android:id="@+id/linear"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rvAppRejShopList"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:orientation="horizontal">
+
+                                <TextView
+
+                                        android:id="@+id/total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="start"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_toLeftOf="@+id/txtrice"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="@string/Total"
+                                        android:textColor="@color/hard_grey"
+                                        android:textSize="14sp"
+                                        tools:ignore="RtlHardcoded,UnknownIdInLayout" />
+
+                                <TextView
+
+                                        android:id="@+id/price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginStart="22dp"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:gravity="center|start"
+                                        android:singleLine="true"
+                                        android:text="$30"
+                                        android:textColor="@color/hard_grey"
+                                        android:textSize="14sp"
+                                        tools:ignore="HardcodedText" />
+
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                    android:id="@+id/deliveryDetailed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linear"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:text="@string/Delivery_Details"
+                                    android:textColor="@color/purple" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                        android:id="@+id/cashonDelivertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:drawablePadding="4dp"
+                        app:drawableRightCompat="@drawable/ic_baseline_info_24"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/Cash_on_Deliverys" />
+
+                <TextView
+                        android:id="@+id/txtYouMustChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashonDelivertext"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="14dp"
+                        android:textSize="12sp"
+                        android:text="You must charge"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText" />
+
+                <TextView
+                        android:id="@+id/cashonDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Cash_on_Delivery" />
+
+                <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/txtYouMustChargeTxt"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/light_grey" />
+
+                <TextView
+                        android:id="@+id/commisiontext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/commission" />
+
+                <TextView
+                        android:id="@+id/commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Cash_on_Delivery" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+            <Button
+                    android:id="@+id/btnapprove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/curve_rectangle_full_green_color"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/Approve"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            <Button
+                    android:id="@+id/btnreject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/curve_rectangle_full_red_color"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/Reject"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+        </ProgressBar>
+
+        <TextView
+                android:id="@+id/txtNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/No_Data_Reload"
+                android:textColor="@color/hard_grey"
+                android:textSize="24sp"
+                android:visibility="gone" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/Selected"
+                    android:elevation="1dp"
+                    android:id="@+id/selectedCredits"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="6sp"
+                    android:paddingLeft="6sp"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp" />
+
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_rectangle_credit_border_yellow"
+            android:id="@+id/buycreditlayout"
+            android:layout_marginTop="10dp"
+            android:padding="18dp">
+
+        <TextView
+                android:id="@+id/credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="100"
+                android:textColor="@color/hard_grey"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/txtcredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credits"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/credits"
+                android:textColor="@color/hard_grey"
+                android:textSize="14sp" />
+
+
+        <TextView
+                android:id="@+id/buycredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtcredits"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="for $110"
+                android:textColor="@color/hard_grey"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+    </RelativeLayout>
+        </RelativeLayout>
+</layout>
+
+<!--        android:background="@drawable/curve_rectangle_credit_border_yellow"-->

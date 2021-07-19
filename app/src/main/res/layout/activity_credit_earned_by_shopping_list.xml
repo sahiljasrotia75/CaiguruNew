@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".seller.sellerSetting.sellerCreditEarned.CreditEarnedByShoppingListActivity">
+
+        <include
+                layout="@layout/toolbar" />
+
+        <ImageView
+                android:id="@+id/creditimg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_credit_earned" />
+
+        <TextView
+                android:id="@+id/totalcredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/creditimg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="83 cr"
+                android:visibility="invisible"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/textCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalcredit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/Total_Credit_Earned"
+                android:textColor="@color/hard_grey"
+                android:textSize="16sp" />
+
+
+        <LinearLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCredit"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/btnEarnedByShoppinList"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curve_rectangle_credit_purple"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:text="@string/Via_Shopping_Lists"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/btnEarnedByReferalCode"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curve_rectangle_referral_credit_purple"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:singleLine="true"
+                    android:text="@string/Via_Referred_Friends"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tabs">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerEarnedShoppinList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabs"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerEarnedByReferalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabs"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+            <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            <ProgressBar
+                    android:id="@+id/progressPagin"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+
+            <include
+                    layout="@layout/nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tabs"
+                    android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

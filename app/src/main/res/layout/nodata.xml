@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txtNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/No_Data_Reload"
+        android:textColor="@color/hard_grey"
+        android:textSize="24sp"
+        android:visibility="visible">
+
+    <ImageView
+            android:id="@+id/nolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:src="@mipmap/nolist" />
+
+    <TextView
+            android:id="@+id/oops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nolist"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/oopsText"
+            android:textColor="@color/purple"
+            android:textSize="20sp" />
+
+
+    <TextView
+            android:id="@+id/NODatadescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oops"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/hard_grey"
+            android:layout_marginRight="32dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/no_list_at_the_moment"
+            android:textSize="16sp" />
+
+
+    <Button
+            android:id="@+id/btnCreatelist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rectangle_curve_loginbutton"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/createList"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/button_text"
+            android:visibility="gone" />
+
+
+</RelativeLayout>
+<!--        android:text="@string/noOnetext"-->

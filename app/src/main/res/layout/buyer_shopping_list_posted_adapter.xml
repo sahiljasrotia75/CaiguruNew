@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/hard_grey"
+            android:textSize="14sp" />
+
+<!--    <TextView-->
+<!--            android:id="@+id/textunit"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:textSize="14dp" />-->
+
+<!--    <TextView-->
+<!--            android:id="@+id/textquantity"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:textColor="@color/hard_grey"-->
+<!--            android:textSize="14dp" />-->
+
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".buyer.homeBuyers.commentBuyers.CommentBuyerHomeActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/CommentLayout"
+            android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+                android:id="@+id/AllLayoutParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+            <RelativeLayout
+                    android:id="@+id/CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/curve_rectangle_fill_purple"
+                    tools:ignore="UnknownIdInLayout">
+
+                <TextView
+                        android:id="@+id/shopListName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Shopping List Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ShoppingListRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shopListName"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginTop="12dp" />
+
+                <TextView
+                        android:id="@+id/viewMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ShoppingListRecycler"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/view_more"
+                        android:textColor="@color/purple"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CardView"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp" />
+
+
+            <include
+                    android:id="@+id/noDataComment"
+                    layout="@layout/nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/CardView"
+                    android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/CommentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+
+        <EditText
+                android:id="@+id/edtComment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@+id/sendButton"
+                android:inputType="textCapSentences"
+                android:background="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/Write_a_comment"
+                android:textSize="14sp" />
+
+        <ImageView
+                android:id="@+id/sendButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_send_comment_message" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+            android:id="@+id/ProgressBarComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+</RelativeLayout>

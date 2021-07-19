@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/switchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp"
+                android:visibility="visible">
+
+
+            <TextView
+                    android:id="@+id/switchText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/switch_to_buyer"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_home_arrow" />
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/activeHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchView"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SellerHomeRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/activeHome" />
+
+        <ProgressBar
+                android:id="@+id/homeProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+        <include
+                android:id="@+id/txtNoDatas"
+                layout="@layout/nodata"
+                android:visibility="visible" />
+
+        <ProgressBar
+                android:id="@+id/homeProgressPagination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/FirstTimeListCreate"
+                android:layout_below="@+id/activeHome">
+            <include
+                    layout="@layout/home_seller_posting_list_layout" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/buyer_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home">
+
+    </item>
+
+    <item
+            android:id="@+id/buyer_seller"
+            android:icon="@drawable/ic_cart_inactive"
+            android:title="@string/orders">
+
+    </item>
+
+    <item
+            android:id="@+id/buyer_post"
+            android:icon="@drawable/ic_post_unselected"
+            android:title="@string/post">
+
+    </item>
+    <item
+            android:id="@+id/buyer_shopping_list"
+            android:icon="@drawable/ic_shopping_lists_unselected"
+            android:title="@string/lists">
+
+    </item>
+    <item
+            android:id="@+id/buyer_setting"
+            android:icon="@drawable/ic_settings_unselected"
+            android:title="@string/Settings">
+
+    </item>
+</menu>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:fillViewport="true"
+        tools:context=".commonScreens.commonNotifications.rateSeller.RateSellerActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/headingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="please rate your experience with yogesh"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,UnknownIdInLayout" />
+
+            <RelativeLayout
+                    android:id="@+id/userlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingText"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rectangle_white_all_corners">
+
+                <RelativeLayout
+                        android:id="@+id/relativeImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/userPiced"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle_background_full_yellow"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_profile" />
+
+                    <ImageView
+                            android:id="@+id/imgBatched"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_profile" />
+                </RelativeLayout>
+
+                <TextView
+                        android:id="@+id/textname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_toEndOf="@+id/relativeImage"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:singleLine="true"
+                        android:text="test"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                <TextView
+                        android:id="@+id/reputations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textname"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/relativeImage"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:singleLine="true"
+                        android:text="Reputation:"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRating"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userlayout"
+                    android:layout_marginTop="20dp" />
+
+            <TextView
+                    android:id="@+id/optionalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recyclerRating"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Write_a_review"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="14sp" />
+
+
+            <EditText
+                    android:id="@+id/edtReviewText"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/optionalText"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/medium_grey"
+                    android:background="@drawable/curve_rectangle_category_grey"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:layout_above="@+id/btnSubmit"
+                    android:textSize="12sp"
+                    android:textAlignment="viewStart" />
+
+            <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+            <Button
+                    android:id="@+id/wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Please_wait"
+                    android:textAllCaps="false"
+                    android:visibility="invisible"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

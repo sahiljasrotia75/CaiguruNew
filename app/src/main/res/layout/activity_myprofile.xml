@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progressLayout"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/allLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+            <include
+                    android:id="@+id/commontoolbar"
+                    layout="@layout/toolbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/commontoolbar">
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/purple"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/background" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/relativeImage"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/circle_background_full_yellow"
+                            android:padding="2dp" />
+
+                    <ImageView
+                            android:id="@+id/imgBatch"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/relativeImage"
+                        app:layout_constraintStart_toStartOf="@+id/relativeImage"
+                        app:layout_constraintTop_toBottomOf="@+id/relativeImage">
+
+
+                    <TextView
+                            android:id="@+id/followingtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toStartOf="@+id/line"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:singleLine="true"
+                            android:text="shggf"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+
+                    <TextView
+                            android:id="@+id/line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    <TextView
+                            android:id="@+id/followerstxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/line"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                        android:id="@+id/reputation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Reputation: Good"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/relativeImage"
+                        app:layout_constraintStart_toStartOf="@+id/relativeImage"
+                        app:layout_constraintTop_toBottomOf="@+id/linear"
+                        tools:ignore="HardcodedText" />
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="6dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/reputation">
+
+                    <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:drawableStart="@drawable/ic_name_profile"
+                                    android:drawablePadding="8dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/name"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="@dimen/all_title_text" />
+
+                            <TextView
+                                    android:id="@+id/editname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:backgroundTint="@color/white"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:inputType="textPersonName"
+                                    android:paddingBottom="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/medium_grey"
+                                    android:textColorHint="@color/medium_grey"
+
+                                    android:textSize="@dimen/all_title_text"
+                                    tools:ignore="TextViewEdits" />
+
+                            <View
+                                    android:id="@+id/view1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/light_grey" />
+
+                            <TextView
+                                    android:id="@+id/textViewe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:drawableStart="@drawable/ic_email_profile"
+                                    android:drawablePadding="8dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/email"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="@dimen/all_title_text" />
+
+                            <TextView
+                                    android:id="@+id/editemail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:backgroundTint="@color/white"
+                                    android:ems="10"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:inputType="text"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/medium_grey"
+                                    android:textColorHint="@color/medium_grey"
+
+                                    android:textSize="@dimen/all_title_text"
+                                    tools:ignore="TextViewEdits" />
+
+
+                            <View
+                                    android:id="@+id/view2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+
+                                    android:background="@color/light_grey" />
+
+                            <TextView
+                                    android:id="@+id/textViewa"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:drawableStart="@drawable/ic_change_address_profile"
+                                    android:drawablePadding="8dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/profile_address"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="@dimen/all_title_text" />
+
+                            <TextView
+                                    android:id="@+id/editaddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:backgroundTint="@color/white"
+                                    android:ems="10"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:inputType="text"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/medium_grey"
+                                    android:textColorHint="@color/medium_grey"
+                                    android:textSize="@dimen/all_title_text"
+                                    tools:ignore="TextViewEdits" />
+
+
+                            <View
+                                    android:id="@+id/view3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/light_grey" />
+
+
+                            <RelativeLayout
+                                    android:id="@+id/relative"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                <TextView
+                                        android:id="@+id/level"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:text="@string/level"
+                                        android:textColor="@color/light_grey"
+                                        android:textSize="@dimen/all_title_text" />
+
+                                <ImageView
+                                        android:id="@+id/levelimg"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:layout_toStartOf="@+id/point" />
+
+                                <TextView
+
+                                        android:id="@+id/point"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginTop="16dp"
+                                        android:fontFamily="@font/montserrat_medium"
+                                        android:gravity="end"
+                                        android:textColor="@color/purple"
+                                        android:textSize="@dimen/all_title_text" />
+
+                                <View
+                                        android:id="@+id/view4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height=".5dp"
+                                        android:layout_below="@+id/level"
+                                        android:layout_marginTop="16dp"
+                                        android:background="@color/light_grey" />
+
+
+                                <TextView
+                                        android:id="@+id/repu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/view4"
+                                        android:layout_marginTop="16dp"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:text="@string/reputation"
+                                        android:textColor="@color/light_grey"
+                                        android:textSize="@dimen/all_title_text" />
+
+
+                                <TextView
+                                        android:id="@+id/good"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/view4"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_toEndOf="@+id/repu"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:gravity="end"
+                                        android:text="Good"
+                                        android:textColor="@color/hard_grey"
+                                        android:textSize="@dimen/all_title_text"
+                                        tools:ignore="HardcodedText" />
+
+                                <View
+                                        android:id="@+id/view5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height=".5dp"
+                                        android:layout_below="@+id/repu"
+                                        android:layout_marginTop="16dp"
+                                        android:background="@color/light_grey" />
+
+
+                                <TextView
+                                        android:id="@+id/categories"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/view5"
+                                        android:layout_marginTop="16dp"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:text="@string/categories"
+                                        android:textColor="@color/light_grey"
+                                        android:textSize="@dimen/all_title_text" />
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rvcategory"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/categories"
+                                        android:layout_marginTop="8dp" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.core.widget.NestedScrollView>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.4" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:id="@+id/progressProfile"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"/>
+
+        <include layout="@layout/nodata"
+                android:id="@+id/noDataProfile"/>
+    </RelativeLayout>
+
+
+</layout>

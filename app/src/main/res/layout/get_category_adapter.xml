@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal">
+
+
+    <TextView
+            android:id="@+id/btncategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rectangle_city_selected_button"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingLeft="24dp"
+            android:textAllCaps="false"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Button"
+            android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:background="@null"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/butn"
+            android:layout_alignParentTop="true">
+
+        <!--        <ImageView-->
+        <!--                android:id="@+id/floatbutton"-->
+        <!--                android:layout_width="24dp"-->
+        <!--                android:layout_height="24dp"-->
+        <!--                android:layout_alignRight="@+id/butn"-->
+        <!--                android:layout_alignParentTop="true"-->
+        <!--                android:scaleType="fitXY"-->
+        <!--                android:src="@drawable/ic_cross_profile" />-->
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_background_full_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+                android:id="@+id/imgBatchs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_daydreamer" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/timeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="3hrs ago"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/relativeImage"
+            tools:ignore="HardcodedText" />
+
+    <TextView
+            android:id="@+id/senderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorPrimary"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/timeAgo"
+            app:layout_constraintStart_toEndOf="@+id/relativeImage"
+            app:layout_constraintTop_toTopOf="@+id/relativeImage"
+            tools:ignore="HardcodedText" />
+
+    <TextView
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Te dfsd dsvsdf svsdfsf sdfwdfxccfs csdf sdfdv asdcsdfdsv sd sdddcs  xtView"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="@+id/senderName"
+            app:layout_constraintStart_toStartOf="@+id/senderName"
+            app:layout_constraintTop_toBottomOf="@+id/senderName"
+            tools:ignore="HardcodedText" />
+
+    <TextView
+            android:id="@+id/unreadCount"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="3"
+            android:textSize="10sp"
+            android:minWidth="20dp"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/white"
+            android:background="@drawable/counter_bg"
+            app:layout_constraintEnd_toEndOf="@+id/timeAgo"
+            app:layout_constraintTop_toTopOf="@+id/message"
+            tools:ignore="HardcodedText,SmallSp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

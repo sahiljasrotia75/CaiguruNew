@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple"
+            android:orientation="vertical"
+            tools:context=".commonScreens.registerCategory.RegisterCategoryActivity">
+
+        <include layout="@layout/toolbar"/>
+
+        <ImageView android:layout_width="match_parent"
+                   android:scaleType="centerCrop"
+                   android:background="@mipmap/background"
+                   android:layout_height="match_parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recycler"
+                android:layout_below="@+id/toolbar"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnfinish"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                android:layout_marginTop="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_below="@id/recycler"
+                android:text="@string/finish"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="@dimen/button_text"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:textAllCaps="false"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/btnfinish"
+                android:layout_marginEnd="34dp"
+                android:layout_marginStart="34dp"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_below="@id/recycler"
+                android:text="@string/Please_wait"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="@dimen/button_text"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:textAllCaps="false"
+                android:visibility="invisible"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/btnwait"
+                android:layout_marginEnd="34dp"
+                android:layout_marginStart="34dp"/>
+        <TextView
+                android:text="@string/txtCategoryInstruction"
+                android:layout_width="0dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="34dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textColor="@color/white"
+                android:textSize="@dimen/category_screen_heading"
+                android:fontFamily="@font/montserrat_regularitalic"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                android:layout_marginTop="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

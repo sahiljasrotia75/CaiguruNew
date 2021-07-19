@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_dialog"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/dialogActive"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgactive"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_active_dialog" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activated"
+            android:layout_marginTop="32dp"
+            android:text="@string/activate"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/purple"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="20dp"/>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/activetext"
+            android:textColor="@color/hard_grey"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/dilog_active_text" />
+
+
+
+    <Button
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_curve_loginbutton"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/dilog_active_text_button"
+            android:textAllCaps="false"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/purple" />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_dialog"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/dialogInactive"
+            android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imginactive"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="32dp"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_inactive_dialog" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inactivated"
+                android:layout_marginTop="32dp"
+                android:text="@string/inactivated"
+                android:layout_gravity="center"
+                android:textColor="@color/purple"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="20dp"/>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:textColor="@color/hard_grey"
+                android:id="@+id/inactivetext"
+                android:textSize="13dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/dilog_inactive_text" />
+
+
+
+        <Button
+                android:id="@+id/inactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_curve_loginbutton"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="center"
+                android:text="@string/dilog_inactive_text_button"
+                android:textAllCaps="false"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/purple" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

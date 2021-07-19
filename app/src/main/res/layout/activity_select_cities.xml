@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <TextView
+                android:id="@+id/textheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/city_heading2"
+                android:textSize="@dimen/cities_select_heading" />
+
+
+        <EditText
+                android:id="@+id/searchview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rectangle_all_corner_border"
+                android:drawableStart="@drawable/ic_search_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/Search_Cities"
+                android:paddingStart="10dp"
+                android:windowSoftInputMode="stateHidden"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="8dp">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ProgressBar
+                            android:id="@+id/progressPagination"
+                            android:layout_width="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    <TextView
+                            android:id="@+id/txtcities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/Selected_Cities"
+                            android:textSize="14sp"
+                            tools:ignore="UnknownIdInLayout" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerbottom"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txtcities"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/No_City_Selected"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/txtcities"
+                            android:layout_marginTop="24dp"
+                            android:id="@+id/noCitySelected"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/hard_grey"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclercities"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/recyclerbottom"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="16dp" />
+                </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>

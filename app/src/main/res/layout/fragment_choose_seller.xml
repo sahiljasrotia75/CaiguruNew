@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".buyer.chooseSellers.chooseSeller.ChooseSellerActivity">
+
+
+        <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+
+            <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_all_corner_border"
+                    android:backgroundTint="@color/light_grey"
+                    android:drawableLeft="@drawable/ic_search_icon"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/Search_Product"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14dp" />
+
+            <TextView
+                    android:id="@+id/txtcancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/search"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Cancle"
+                    android:textAlignment="center"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+        </LinearLayout>
+
+        <RadioGroup
+                android:id="@+id/checkBoxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLayout"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/chechbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/yellow"
+                    android:button="@drawable/radiobutton_home_delivery_selector"
+                    android:checked="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingStart="12dp"
+                    android:text="@string/Home_Delivery"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+
+            <RadioButton
+                    android:id="@+id/chechbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:button="@drawable/radiobutton_self_pickup_selector"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingStart="12dp"
+                    android:text="@string/Self_Pickup"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sellerRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/checkBoxLayout"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="14dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBoxLayout"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone" />
+
+        <!--        <TextView-->
+        <!--                android:id="@+id/txtNoData"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:fontFamily="@font/montserrat_medium"-->
+        <!--                android:text="@string/No_Data_Reload"-->
+        <!--                android:textColor="@color/hard_grey"-->
+        <!--                android:textSize="24dp"-->
+        <!--                android:visibility="gone" />-->
+        <include
+                layout="@layout/nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/noDataChooseSeller"
+                android:layout_below="@id/checkBoxLayout" />
+
+        <ProgressBar
+                android:id="@+id/progressPagination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

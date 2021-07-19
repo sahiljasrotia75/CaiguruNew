@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heading_marginTop">18sp</dimen>
+    <dimen name="image_marginTop">20sp</dimen>
+    <dimen name="name_heading_top">22sp</dimen>
+    <dimen name="titles_top_gaps">16sp</dimen>
+    <dimen name="heading_textSize">22sp</dimen>
+    <dimen name="all_title_text">16sp</dimen>
+    <dimen name="refferal_text">20sp</dimen>
+
+    <dimen name="button_text">16sp</dimen>
+    <dimen name="button_size">56sp</dimen>
+    <dimen name="button_ol">120sp</dimen>
+
+    <dimen name="already_text_account_size">16sp</dimen>
+    <dimen name="edtext_margin_top">8sp</dimen>
+
+    //register category Screen
+    <dimen name="category_screen_heading">15sp</dimen>
+    <dimen name="button_common">44sp</dimen>
+    <dimen name="edtext_gap">40sp</dimen>
+
+
+    <dimen name="log_button">56sp</dimen>
+    <dimen name="log_email">18sp</dimen>
+    <dimen name="log_password">18sp</dimen>
+    <dimen name="log_button_text">18sp</dimen>
+    <dimen name="log_fb_text">18sp</dimen>
+    <dimen name="log_signup_text">16sp</dimen>
+    <dimen name="dont_have_an_account_text">16sp</dimen>
+    <dimen name="log_or_text">18sp</dimen>
+
+    //seller category
+    <dimen name="seller_heading_text_size">13sp</dimen>
+
+    //seller post shopping list
+
+    <dimen name="pickuptext">12.3sp</dimen>
+    <dimen name="sellertimezonetext">14sp</dimen>
+    <dimen name="cities_select_heading">14.5sp</dimen>
+
+</resources>

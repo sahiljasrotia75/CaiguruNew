@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="login"
+                  type="com.example.caiguru.commonScreens.loginScreen.LoginListener"/>
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/purple"
+                android:src="@mipmap/background"
+                android:layout_height="match_parent"
+                tools:context=".login_screen.LoginActivity">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                       android:background="@mipmap/background"
+                       android:layout_height="match_parent"
+                       tools:layout_editor_absoluteY="168dp"
+                       android:scaleType="centerCrop"
+                       tools:layout_editor_absoluteX="0dp"
+                       android:id="@+id/imageView2"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="24dp"
+                    android:id="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintBottom_toTopOf="@+id/btnMain">
+
+
+                <TextView
+                        android:text="@string/email_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_log_email"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/button_text"/>
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:paddingBottom="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/light_grey"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat_light"
+                        android:hint="@string/email_hint"
+                        android:id="@+id/editemail"/>
+
+                <TextView
+                        android:text="@string/password_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_password_login"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/button_text"
+                        android:id="@+id/textView2"/>
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:textSize="14sp"
+                        android:paddingBottom="20dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/light_grey"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat_light"
+                        android:hint="@string/password_hint"
+                        android:id="@+id/editpassword"/>
+
+                <TextView
+                        android:text="@string/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/forgotPassword"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/btnMain"
+                    android:layout_height="@dimen/button_size"
+                    app:layout_constraintStart_toStartOf="@+id/btnfacebooklogin"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnfacebooklogin"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:id="@+id/btnPleaseWait"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                    <TextView
+                            android:text="@string/pleasewait"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:textColor="@color/purple"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/button_text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:id="@+id/btnlogin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:onClick="@{()-> login.loginListener(editemail.getText().toString(),editpassword.getText().toString())}">
+
+                    <TextView
+                            android:text="@string/login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:id="@+id/log"
+                            android:textColor="@color/purple"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/button_text"/>
+
+                    <ImageView
+                            android:layout_width="16dp"
+                            android:layout_marginStart="8dp"
+                            android:gravity="center"
+                            android:src="@drawable/ic_login_arrow"
+                            android:layout_height="16dp"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                    android:text="@string/or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textSize="@dimen/log_or_text"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_regular"
+                    app:layout_constraintStart_toStartOf="@+id/btnfacebooklogin"
+                    app:layout_constraintEnd_toEndOf="@+id/btnfacebooklogin"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnfacebooklogin"/>
+
+            <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="@dimen/button_size"
+                    android:id="@+id/btnfacebooklogin"
+                    android:background="@drawable/rectangle_curve_facebbok_button"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView5"
+                    android:layout_marginStart="24dp"
+                    android:onClick="@{()-> login.facebookListener()}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                        android:layout_width="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_fb"
+                        android:layout_height="16dp"/>
+
+                <TextView
+                        android:text="@string/login_With_facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="@dimen/button_text"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                    android:text="@string/dont_have_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textSize="@dimen/already_text_account_size"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/btnfacebooklogin"
+                    app:layout_constraintEnd_toEndOf="@+id/btnfacebooklogin"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <TextView
+                    android:id="@+id/txtsignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/signup"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toEndOf="@+id/btnfacebooklogin"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/login"
+                    android:id="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.100000024"/>
+
+
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/viewSignUpClick"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/txtsignup"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

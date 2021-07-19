@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imagepayment"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/radiobutton_self_pickup_selector"
+            android:layout_marginTop="10dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/cash"
+            android:id="@+id/titlePayment"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/hard_grey"
+            android:textAlignment="viewStart"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/imagepayment"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/txtListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler1"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="list name"
+            android:textColor="@color/purple"
+            android:textSize="14dp" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="12dp">
+
+
+        <TextView
+                android:id="@+id/headdeliveytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/Delivery_Type"
+                android:textColor="@color/purple"
+                android:textSize="14dp" />
+
+        <TextView
+                android:id="@+id/txtdeliverytype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|center"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="end"
+                android:hint="Home Delivery"
+                android:textColor="@color/hard_grey"
+                android:textSize="14dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="12dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/headdeliveyDays"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/Delivery_Days"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp" />
+
+            <TextView
+                    android:id="@+id/txtdeliveryDays"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end|center"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end"
+                    android:hint="delivey days"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="12dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/headdeliveyAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_weight=".8"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/Delivery_Address"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp" />
+
+            <TextView
+                    android:id="@+id/txtdeliveryAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end"
+                    android:hint="Delivery Address"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="16dp">
+
+        <TextView
+                android:id="@+id/txtCashOnDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler1"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/Cash_on_Delivery"
+                android:textColor="@color/hard_grey"
+                android:textSize="14dp" />
+
+        <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler1"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|center"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$256"
+                android:textColor="@color/hard_grey"
+                android:textSize="14dp" />
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/productheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Add_Product_Details"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="16dp" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_background_white"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_product_img" />
+
+                <ProgressBar
+                        android:id="@+id/progressdialog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/txtupdateimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:hint="@string/Upload_photo"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14dp" />
+
+            <EditText
+                    android:id="@+id/edtname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/dialogName"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="16dp"
+                    android:windowSoftInputMode="adjustResize" />
+
+            <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtchoseDeliveryzone"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/light_grey" />
+
+
+            <Spinner
+                    android:id="@+id/edtunit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="text"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="16dp" />
+
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/light_grey" />
+
+            <TextView
+                    android:id="@+id/edtprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/Price_Star"
+                    android:padding="2dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="16dp"
+                    android:windowSoftInputMode="adjustResize" />
+
+            <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtchoseDeliveryzone"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/light_grey" />
+
+            <TextView
+                    android:id="@+id/edtPriceWithComission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/Price_with_comission"
+                    android:inputType="numberDecimal"
+                    android:maxLength="9"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="16dp"
+                    android:windowSoftInputMode="adjustResize" />
+
+            <View
+                    android:id="@+id/view34"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtchoseDeliveryzone"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/light_grey" />
+
+            <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp" />
+
+            <TextView
+                    android:id="@+id/dialogMoneyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/the_money_you_will_receive_when_you_will_deliver_the_order"
+                    android:textAlignment="center"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="12dp" />
+
+            <TextView
+                    android:id="@+id/dialogComissionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="22dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/the_price_the_buyer_will_see"
+                    android:textAlignment="center"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="12dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

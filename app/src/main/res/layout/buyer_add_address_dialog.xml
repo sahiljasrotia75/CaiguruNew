@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="10dp">
+
+                <TextView
+                        android:id="@+id/addressheading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Add_address_Details"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+
+                <TextView
+                        android:id="@+id/addresspleaseSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/add_home_address"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+
+                <!--            <View-->
+                <!--                    android:id="@+id/view2"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height=".5dp"-->
+                <!--                    android:layout_below="@+id/addressheading"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:layout_marginTop="16dp"-->
+                <!--                    android:layout_marginEnd="10dp"-->
+                <!--                    android:background="@color/light_grey" />-->
+
+                <!--            <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="16dp"-->
+                <!--                    android:visibility="gone">-->
+
+                <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+                <!--                        android:id="@+id/img"-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:background="@drawable/circle_background_white"-->
+                <!--                        android:padding="2dp"-->
+                <!--                        android:src="@drawable/ic_product_img" />-->
+
+                <!--                <ProgressBar-->
+                <!--                        android:id="@+id/progressdialog"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:visibility="invisible" />-->
+
+                <!--            </RelativeLayout>-->
+
+                <!--            <TextView-->
+                <!--                    android:id="@+id/txtupdateimg"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="12dp"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_marginEnd="12dp"-->
+                <!--                    android:background="@android:color/transparent"-->
+                <!--                    android:fontFamily="@font/montserrat_regular"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:hint="@string/Upload_photo"-->
+                <!--                    android:textColor="@color/hard_grey"-->
+                <!--                    android:textSize="14dp"-->
+                <!--                    android:visibility="gone" />-->
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/cardAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/curve_address">
+
+                <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_toStartOf="@+id/EdtMapLocation"
+                        android:background="@null"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="@string/address"
+                        android:paddingStart="4dp"
+                        android:textColor="@color/hard_grey"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        tools:ignore="RtlSymmetry" />
+                                <EditText
+                                        android:id="@+id/addressHome"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:background="@null"
+                                        android:fontFamily="@font/montserrat_regular"
+                                        android:hint="@string/address"
+                                        android:paddingStart="4dp"
+                                        android:singleLine="true"
+                                        android:imeOptions="actionDone"
+                                        android:textColor="@color/hard_grey"
+                                        android:textSize="12sp"
+                                        android:visibility="invisible"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_toStartOf="@+id/EdtMapLocation"
+                                        tools:ignore="RtlSymmetry" />
+                <ImageView
+                        android:id="@+id/EdtMapLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="12dp"
+                        android:padding="4dp"
+                        android:src="@drawable/pencil_red"
+                        android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+            <!--            <View-->
+            <!--                    android:id="@+id/view"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height=".5dp"-->
+            <!--                    android:layout_below="@+id/txtchoseDeliveryzone"-->
+            <!--                    android:layout_marginStart="10dp"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:layout_marginEnd="10dp"-->
+            <!--                    android:background="@color/light_grey" />-->
+
+
+            <TextView
+                    android:id="@+id/viewmap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_choose_location_seller_icon"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:hint="@string/view_on_map"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="12sp"
+                    tools:ignore="TextViewEdits" />
+
+            <!--            <View-->
+            <!--                    android:id="@+id/view1"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height=".5dp"-->
+            <!--                    android:layout_marginStart="10dp"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:layout_marginEnd="10dp"-->
+            <!--                    android:background="@color/light_grey" />-->
+
+            <!--            <EditText-->
+            <!--                    android:id="@+id/edtprice"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="12dp"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:layout_marginEnd="12dp"-->
+            <!--                    android:background="@android:color/transparent"-->
+            <!--                    android:fontFamily="@font/montserrat_regular"-->
+            <!--                    android:hint="@string/quantity"-->
+            <!--                    android:inputType="number"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:textColor="@color/hard_grey"-->
+            <!--                    android:textSize="16dp" />-->
+
+            <!--            <View-->
+            <!--                    android:id="@+id/view3"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height=".5dp"-->
+            <!--                    android:layout_below="@+id/txtchoseDeliveryzone"-->
+            <!--                    android:layout_marginStart="10dp"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:layout_marginEnd="10dp"-->
+            <!--                    android:layout_marginBottom="16dp"-->
+            <!--                    android:background="@color/light_grey" />-->
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/updateButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:visibility="visible" />
+
+                <Button
+                        android:id="@+id/updateButtonWait"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rectangle_curve_loginbutton"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/Please_wait"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple"
+                        android:visibility="gone" />
+
+                <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/rectangle_curve_margin"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/yellow"
+                        android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textfeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/montserrat_regularitalic"
+                    android:gravity="center"
+                    android:text="@string/The_feed_will_be_presented_as_per_your_current_location"
+                    android:textSize="@dimen/seller_heading_text_size"
+                    android:visibility="gone" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

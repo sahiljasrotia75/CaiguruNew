@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            android:id="@+id/productNameUnit"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:layout_toLeftOf="@+id/txtrice"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="product Name"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/price" />
+
+    <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="price"
+            android:textAlignment="viewStart"
+            android:textColor="@color/hard_grey"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/productNameUnit"
+            app:layout_constraintTop_toTopOf="@+id/quantity"
+            app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="quantity"
+            android:textColor="@color/purple"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/productImage"
+            app:layout_constraintEnd_toStartOf="@+id/productImage"
+            app:layout_constraintHorizontal_bias="0.57"
+            app:layout_constraintStart_toEndOf="@+id/price"
+            app:layout_constraintTop_toTopOf="@+id/productImage" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/productImage"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/curve_rectangle_category_grey"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:riv_border_color="#bbbbbb"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius="6dp"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat">
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/linear"
+            android:layout_marginTop="14dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/productNameUnit"
+            app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

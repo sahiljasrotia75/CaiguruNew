@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="match_parent"
+        tools:context=".commonScreens.otherProfiles.viewAllShoppingList.ViewAllShoppingActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/ViewAllReviewsRecycler"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_height="match_parent"/>
+
+    <TextView
+            android:id="@+id/TxtNoDataSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/No_Data_Reload"
+            android:textColor="@color/hard_grey"
+            android:textSize="24sp"
+            android:visibility="invisible"
+   />
+
+</RelativeLayout>

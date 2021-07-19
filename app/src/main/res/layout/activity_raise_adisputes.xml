@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".commonScreens.commonNotifications.disputeAndResolution.raiseADsiputeBuyerSideNotification.RaiseADisputesActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:id="@+id/shoppingListLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/curve_rectangle_fill_purple"
+                    tools:ignore="UnknownIdInLayout">
+
+                <TextView
+                        android:id="@+id/txtListName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="shopping List name"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/disputeRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtListName" />
+
+                <View
+                        android:id="@+id/views"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:background="@color/light_grey"
+                        android:layout_below="@+id/disputeRecycler"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/views"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/Total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/txttotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/disputeRecycler"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/Total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/hard_grey"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shoppingListLayout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:text="@string/Enter_Contact_Number"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="14sp" />
+
+            <RelativeLayout
+                    android:id="@+id/numberLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtHeading"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/curve_rectangle_full_white">
+
+                <EditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:inputType="textCapSentences"
+                        android:imeOptions="actionDone"
+                        android:background="@null"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="@string/Please_Enter_The_Name"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="14sp" />
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/edtName"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/medium_grey" />
+
+                <EditText
+                        android:id="@+id/edtNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:imeOptions="actionDone"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="@string/please_enter_contact_number"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/headingReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/numberLayout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:text="@string/Please_provide_reason_for_your_dispute"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="14sp" />
+
+            <EditText
+                    android:id="@+id/edtReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_below="@+id/headingReason"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/medium_grey"
+                    android:padding="8dp"
+                    android:inputType="textCapSentences"
+                    android:textSize="14sp"
+                    android:hint="@string/enter_your_reson"
+                    android:layout_marginTop="12dp"
+                    android:gravity="start"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/curve_rectangle_category_grey"
+                    android:textAlignment="viewStart" />
+
+
+            <Button
+                    android:id="@+id/btnConfirmCompletions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_below="@+id/edtReason"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+            <Button
+                    android:id="@+id/Wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_below="@+id/edtReason"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:visibility="invisible"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Please_wait"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

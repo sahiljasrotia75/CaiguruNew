@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/activeShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:fontFamily="@font/montserrat_light"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:padding="4dp"
+                android:text="@string/active"
+                android:textColor="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShopList"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+</layout>

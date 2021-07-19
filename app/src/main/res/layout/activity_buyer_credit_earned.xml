@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".seller.sellerSetting.sellerCreditEarned.CreditEarnedByShoppingListActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <ImageView
+                android:id="@+id/creditimg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_credit_earned" />
+
+        <TextView
+                android:id="@+id/totalcredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/creditimg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="83 cr"
+                android:visibility="invisible"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/textCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalcredit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/Total_Credit_Earned"
+                android:textColor="@color/hard_grey"
+                android:textSize="16sp" />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textCredit"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="6dp">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/topreffereduser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/yourtopreffereduser"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvbuyerTopReffered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/topreffereduser"
+                        android:layout_marginTop="8dp" />
+
+                <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                <include
+                        layout="@layout/nodata"
+                        android:visibility="gone" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

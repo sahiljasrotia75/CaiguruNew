@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.caiguru.commonScreens.networkError.NetworkErrorActivity">
+
+    <ImageView
+            android:id="@+id/networkImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/network_error" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/networkImg"
+            android:layout_marginTop="50dp"
+            android:id="@+id/whoops"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/Whoops"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="22sp" />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/whoops"
+            android:layout_marginTop="50dp"
+            android:id="@+id/textnoConnection"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/no_internet_Found"
+            android:textAlignment="center"
+            android:textColor="@color/hard_grey"
+            android:textSize="18sp" />
+
+    <Button
+            android:id="@+id/btnnext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rectangle_curve_loginbutton"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/Retry"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/button_text" />
+
+</RelativeLayout>

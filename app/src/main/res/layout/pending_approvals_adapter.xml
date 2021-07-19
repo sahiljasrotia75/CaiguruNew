@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:id="@+id/backColorLayout"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_background_full_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+                android:id="@+id/imgBatchs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/textnames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Julia sanchezf ghdhgfg hh ghf ghfg hghghf"
+            android:textColor="@color/medium_grey"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+
+<!--    <TextView-->
+<!--            android:id="@+id/listNames"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_cont ent"-->
+<!--            android:layout_marginLeft="2dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_toRightOf="@+id/textnames"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:text="Reputation:"-->
+<!--            android:textColor="@color/medium_grey"-->
+<!--            android:textSize="16dp" />-->
+
+    <TextView
+            android:id="@+id/timeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textnames"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/relativeImage"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="20 minute ago"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/hard_grey"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    <ImageView
+            android:id="@+id/dot"
+            android:layout_width="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="6dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle__fill_purple"/>
+</RelativeLayout>

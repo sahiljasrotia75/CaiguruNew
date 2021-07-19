@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/dollar"
+            android:icon="@drawable/ic_dollar_home"
+            android:title=""
+            android:visible="true"
+            app:showAsAction="always">
+
+    </item>
+
+    <item
+            android:id="@+id/homeText"
+            android:actionLayout="@layout/home_text"
+            android:title=""
+            app:showAsAction="always" />
+
+<!--    <item-->
+<!--            android:id="@+id/referalCode"-->
+<!--            android:icon="@drawable/ic_rewards_home"-->
+<!--            android:title=""-->
+<!--            android:visible="true"-->
+<!--            app:showAsAction="always">-->
+
+<!--    </item>-->
+
+
+
+
+</menu>

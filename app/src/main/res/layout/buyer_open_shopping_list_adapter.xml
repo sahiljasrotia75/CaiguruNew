@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgs"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_background_full_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+                android:id="@+id/imgBatchs"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+
+
+    <TextView
+            android:id="@+id/textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="yogesh singh"
+            android:textColor="@color/purple"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+            android:id="@+id/reputationbuyer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textname"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Reputation:"
+            android:textColor="@color/medium_grey"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_arrow_shopping_lst" />
+
+
+    <TextView
+            android:id="@+id/bestquotetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reputationbuyer"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/quote"
+            android:textSize="12sp" />
+
+    <TextView
+            android:id="@+id/bestquote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reputationbuyer"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/bestquotetext"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$0"
+            android:textColor="@color/hard_grey"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+
+
+    <TextView
+            android:id="@+id/txtCommission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reputationbuyer"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toStartOf="@+id/commission"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/commission"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+    <TextView
+            android:id="@+id/commission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/reputationbuyer"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0"
+            android:textColor="@color/hard_grey"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/bestquote"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/background"/>
+
+</RelativeLayout>

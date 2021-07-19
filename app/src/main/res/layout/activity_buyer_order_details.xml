@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context="com.example.caiguru.buyer.buyerProfile.buyerOrderDetalis.BuyerOrderDetailsActivity">
+
+
+    <include
+            android:id="@+id/orderDetailsToolbar"
+            layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/relativeParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/orderDetailsToolbar"
+            android:fillViewport="true"
+            android:visibility="invisible">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+
+            <!--        <TextView-->
+            <!--                android:id="@+id/txtHeading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="16dp"-->
+            <!--                android:fontFamily="@font/montserrat_medium"-->
+            <!--                android:text="@string/seller_details"-->
+            <!--                android:textColor="@color/purple"-->
+            <!--                android:textSize="14dp" />-->
+
+
+            <RelativeLayout
+                    android:id="@+id/relativeImagge"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userPic"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/circle_background_full_yellow"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_profile" />
+
+                <ImageView
+                        android:id="@+id/imgBatchs"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_profile" />
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/textname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@+id/relativeImagge"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:singleLine="true"
+                    android:text="test"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,UnknownIdInLayout" />
+
+            <TextView
+                    android:id="@+id/reputation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textname"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/relativeImagge"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:singleLine="true"
+                    android:text="Reputation:"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeImagge"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                        android:id="@+id/LayoutGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/cardVieW"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            app:cardCornerRadius="8dp">
+
+                        <TextView
+                                android:id="@+id/txtlist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center_vertical"
+                                android:textSize="13sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                            android:id="@+id/relative"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white"
+                            android:elevation="0dp"
+                            android:visibility="visible">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/listName"
+                                android:nestedScrollingEnabled="false"
+                                tools:ignore="UnknownIdInLayout" />
+
+                        <TextView
+                                android:id="@+id/total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recyclerDetails"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="@string/Total"
+                                android:textColor="@color/hard_grey"
+                                android:textSize="14sp" />
+
+
+                        <TextView
+                                android:id="@+id/price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recyclerDetails"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="106dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginEnd="12dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="$30"
+                                android:textColor="@color/hard_grey"
+                                android:textSize="14sp"
+                                tools:ignore="HardcodedText" />
+
+                        <View
+                                android:id="@+id/view2"
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_below="@+id/price"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@color/light_grey" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+          <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_below="@+id/cardView1"
+                  android:id="@+id/acceptedStatusLayout"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content">
+
+              <TextView
+                      android:id="@+id/headingPartialPayment"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="12dp"
+                      android:layout_marginTop="14dp"
+                      android:fontFamily="@font/montserrat_regular"
+                      android:text="@string/partial_payment_made"
+                      android:textColor="@color/hard_grey"
+                      android:textSize="14sp" />
+
+              <TextView
+                      android:id="@+id/txtPartialPayment"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentEnd="true"
+                      android:layout_marginTop="14dp"
+                      android:layout_marginEnd="12dp"
+                      android:fontFamily="@font/montserrat_bold"
+                      android:text="@string/Total"
+                      android:textColor="@color/hard_grey"
+                      android:textSize="14sp" />
+
+              <View
+                      android:id="@+id/viewPartial"
+                      android:layout_width="match_parent"
+                      android:layout_height=".5dp"
+                      android:layout_below="@+id/headingPartialPayment"
+                      android:layout_marginStart="12dp"
+                      android:layout_marginTop="12dp"
+                      android:layout_marginEnd="12dp"
+                      android:background="@color/light_grey" />
+
+
+              <TextView
+                      android:id="@+id/headingCashOnDelivery"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/viewPartial"
+                      android:layout_marginStart="12dp"
+                      android:layout_marginTop="14dp"
+                      android:fontFamily="@font/montserrat_regular"
+                      android:text="@string/Cash_on_Deliverys"
+                      android:textColor="@color/hard_grey"
+                      android:textSize="14sp" />
+
+              <TextView
+                      android:id="@+id/txtCashOnDeliverys"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/viewPartial"
+                      android:layout_alignParentEnd="true"
+                      android:layout_marginTop="14dp"
+                      android:layout_marginEnd="12dp"
+                      android:fontFamily="@font/montserrat_bold"
+                      android:text="@string/Total"
+                      android:textColor="@color/hard_grey"
+                      android:textSize="14sp" />
+
+              <View
+                      android:id="@+id/viewCash"
+                      android:layout_width="match_parent"
+                      android:layout_height=".5dp"
+                      android:layout_below="@+id/headingCashOnDelivery"
+                      android:layout_marginStart="12dp"
+                      android:layout_marginTop="12dp"
+                      android:layout_marginEnd="12dp"
+                      android:background="@color/light_grey" />
+
+          </RelativeLayout>
+            <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/acceptedStatusLayout"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Status"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/acceptedStatusLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/Total"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+            <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtStatus"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_grey" />
+
+            <TextView
+                    android:id="@+id/orderOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Ordered_on"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/txtOrderOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="orderon"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtOrderOn"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_grey"
+                    android:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/orderComplted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Order_completed_on"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/txtorderComplted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="orderon"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+            <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/orderComplted"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_grey" />
+
+            <TextView
+                    android:id="@+id/pickupAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view7"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/Pickup_Address"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/txtPickupAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view7"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toEndOf="@+id/pickupAddress"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="end"
+                    android:text="orderoghgjhgjgjgjhgjhgjhgjgjhghjjhgjhgjkgn"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@+id/txtPickupAddress"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/light_grey" />
+
+            <TextView
+                    android:id="@+id/txtsellerReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view5"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/seller_rejected_because"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+            <TextView
+                    android:id="@+id/sellerReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtsellerReason"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/txtNoData"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:fontFamily="@font/montserrat_medium"-->
+    <!--            android:text="@string/No_Data_Reload"-->
+    <!--            android:textColor="@color/hard_grey"-->
+    <!--            android:textSize="24dp"-->
+    <!--            android:visibility="visible" />-->
+
+    <include
+            android:id="@+id/moDataOrderdetails"
+            layout="@layout/nodata"
+            android:visibility="gone" />
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+
+</RelativeLayout>

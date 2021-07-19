@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/light_grey"
+            android:layout_height="match_parent"
+            tools:context=".setting_screen.Setting_Fragment">
+
+        <include
+                android:id="@+id/include2"
+                layout="@layout/toolbar"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="-14dp" />
+
+        <RelativeLayout
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                app:cardCornerRadius="8dp"
+                app:cardPreventCornerOverlap="false"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/rectangle_top_left_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include2">
+
+
+
+            <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/You_have_complete_the_order_for"
+                    android:textAlignment="center"
+                    android:textColor="@color/hard_grey"
+                    android:textSize="14sp" />
+
+
+            <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/heading"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_above="@+id/btnnext"
+                    android:id="@+id/nested"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_height="wrap_content">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_purple"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/listname"
+                            android:layout_width="match_parent"
+                            android:textAllCaps="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:singleLine="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/Shopping_list_name"
+                            android:textColor="@color/purple"
+                            android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclershopping"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                    android:id="@+id/addresslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp">
+
+                <TextView
+                        android:id="@+id/headingAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/Delivery_Address"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/addressSet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="adress"
+                        android:textAlignment="viewEnd"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/addresslayout"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:background="@color/light_grey" />
+
+            <LinearLayout
+                    android:id="@+id/addresslayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:visibility="invisible"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp">
+
+                <TextView
+                        android:id="@+id/comissionHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/partial_payment_made"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/comissionSet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="comission"
+                        android:textAlignment="viewEnd"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+            </LinearLayout>
+            </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <Button
+                    android:id="@+id/btnnext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_curve_loginbutton"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/done"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/button_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpUsage" />
+        </RelativeLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="24dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

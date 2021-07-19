@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/innerLayout"
+            android:layout_height="wrap_content">
+    <RelativeLayout
+            android:id="@+id/relativeImage"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_background_yellow"
+                android:padding="2dp"
+                android:src="@drawable/ic_profile" />
+
+        <ImageView
+                android:id="@+id/imgBatchs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+
+
+    <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@+id/hoursAgo"
+            android:layout_toEndOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_bold"
+            android:singleLine="true"
+            android:text="test"
+            android:textColor="@color/purple"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+            android:id="@+id/Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textname"
+
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/relativeImage"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginEnd="22dp"
+            android:text="dummy text"
+            android:textColor="@color/medium_grey"
+            android:textSize="14dp" />
+
+    <TextView
+            android:id="@+id/hoursAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reputation"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+
+            android:fontFamily="@font/montserrat_bold"
+            android:singleLine="true"
+            android:text="time"
+            android:textColor="@color/medium_grey"
+            android:textSize="12dp"
+            android:visibility="visible" />
+
+
+</RelativeLayout>
+    <View
+            android:layout_width="match_parent"
+            android:background="@color/light_grey"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_below="@+id/innerLayout"
+            android:layout_height=".5dp"/>
+</RelativeLayout>

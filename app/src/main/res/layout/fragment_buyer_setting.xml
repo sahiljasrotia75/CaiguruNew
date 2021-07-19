@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/purple"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/background"
+                    />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/relativeImage"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/circle_background_yellow"
+                    android:padding="2dp"
+                    />
+
+            <ImageView
+                    android:id="@+id/imgBatch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY" />
+
+        </RelativeLayout>
+
+
+        <TextView
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Lola Mento"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/relativeImage"
+                app:layout_constraintStart_toStartOf="@+id/relativeImage"
+                app:layout_constraintTop_toBottomOf="@+id/relativeImage" />
+
+        <TextView
+                android:id="@+id/reputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txtname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text=""
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/relativeImage"
+                app:layout_constraintStart_toStartOf="@+id/relativeImage"
+                app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:cardCornerRadius="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reputation">
+
+            <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/credit1"
+                            android:textSize="@dimen/all_title_text"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/light_grey"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/credit_in_account"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/credit"
+                            android:gravity="end"
+                            android:textSize="14dp"
+                            android:layout_toRightOf="@+id/credit1"
+                            android:textColor="@color/purple"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:layout_alignParentEnd="true"
+                            android:text="30cr"/>
+                    <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_below="@+id/credit1"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@color/light_grey" />
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/creditearn"
+                            android:layout_below="@+id/view2"
+                            android:textSize="@dimen/all_title_text"                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/light_grey"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/credit_earn_tillnow"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/creditEarned"
+                            android:gravity="end"
+                            android:layout_below="@+id/view2"
+                            android:layout_toRightOf="@+id/creditearn"
+                            android:textColor="@color/purple"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="16dp"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:layout_alignParentEnd="true"
+                            android:text="100cr"/>
+                    <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_below="@+id/creditearn"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@color/light_grey" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:layout_below="@+id/view3"
+                            android:id="@+id/rvprofile"/>
+
+                </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+        <ProgressBar
+                android:id="@+id/logoutProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:elevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
